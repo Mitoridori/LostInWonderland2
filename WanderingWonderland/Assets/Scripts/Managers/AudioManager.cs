@@ -11,8 +11,6 @@ public class AudioManager : MonoBehaviour
     public AudioMixer mixer;
     public AudioSettings[] settings;
 
-    private float masterValue = 0;
-
     private enum AudioGroups
     {
         Master,
@@ -34,35 +32,23 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void CapVolume(float value)
-    {
-        if(value >= masterValue)
-        {
-            value = masterValue;
-        }
-    }
-
     public void SetMasterVolume(float value)
     {
-        masterValue = value;
         settings[(int)AudioGroups.Master].SetExposedParam(value);
     }
 
     public void SetMusicVolume(float value)
     {
-        CapVolume(value);
         settings[(int)AudioGroups.Music].SetExposedParam(value);
     }
 
     public void SetSFXVolume(float value)
     {
-        CapVolume(value);
         settings[(int)AudioGroups.SFX].SetExposedParam(value);
     }
 
     public void SetAmbientVolume(float value)
     {
-        CapVolume(value);
         settings[(int)AudioGroups.Ambient].SetExposedParam(value);
     }
 }
@@ -75,12 +61,12 @@ public class AudioSettings
 
     public void Initialize()
     {
-        slider.value = PlayerPrefs.GetFloat(exposedParam);
+        slider.value = PlayerPrefs.GetFloat(exposedParam, 0.75f);
     }
 
     public void SetExposedParam(float value)
     {
-        AudioManager.instance.mixer.SetFloat(exposedParam, value);
+        AudioManager.instance.mixer.SetFloat(exposedParam, Mathf.Log10(value) * 20);
         PlayerPrefs.SetFloat(exposedParam, value);
     }
 }
