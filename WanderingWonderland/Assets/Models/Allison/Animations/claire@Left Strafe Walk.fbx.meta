@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d3d5e801185c604dbc863e51ba027b6
+guid: e0890fe9449a36c4cb85fe35c1432693
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -161,7 +161,7 @@ ModelImporter:
     400152: Spine
     400154: Spine1
     400156: Spine2
-    7400000: walkingRight
+    7400000: walkingLeft
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -192,7 +192,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: walkingRight
+      name: walkingLeft
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 28
