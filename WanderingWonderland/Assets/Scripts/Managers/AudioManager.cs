@@ -13,7 +13,6 @@ public class AudioManager : MonoBehaviour
 
     private enum AudioGroups
     {
-        Master,
         Music,
         SFX,
         Ambient
@@ -30,11 +29,6 @@ public class AudioManager : MonoBehaviour
         {
             settings[i].Initialize();
         }
-    }
-
-    public void SetMasterVolume(float value)
-    {
-        settings[(int)AudioGroups.Master].SetExposedParam(value);
     }
 
     public void SetMusicVolume(float value)
@@ -61,12 +55,12 @@ public class AudioSettings
 
     public void Initialize()
     {
-        slider.value = PlayerPrefs.GetFloat(exposedParam, 0.75f);
+        slider.value = PlayerPrefs.GetFloat(exposedParam);
     }
 
     public void SetExposedParam(float value)
     {
-        AudioManager.instance.mixer.SetFloat(exposedParam, Mathf.Log10(value) * 20);
+        AudioManager.instance.mixer.SetFloat(exposedParam, value);
         PlayerPrefs.SetFloat(exposedParam, value);
     }
 }
