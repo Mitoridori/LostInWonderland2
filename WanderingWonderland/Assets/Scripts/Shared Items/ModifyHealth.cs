@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class ModifyHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Health health;
+
+    private void Start()
     {
-        
+        health = GetComponent<Health>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int amount)
     {
-        
+        if(health)
+        {
+
+        }
     }
+
+    public void HealCharacter(int amount)
+    {
+        if (health)
+        {
+
+        }
+    }
+
 }
