@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
         Music,
         SFX,
         Ambient
-    };
+    }
 
     private void Awake()
     {
