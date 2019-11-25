@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RangedEnemy : MonoBehaviour
 {
+
+    //don't remove
     // Start is called before the first frame update
     void Start()
     {

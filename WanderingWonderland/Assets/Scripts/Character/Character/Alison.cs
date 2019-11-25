@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Alison : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int maxHitPoints = 5;
+    private CharacterHealth healthBar;
+    private int currentHealth;
+
+    private void Start()
     {
-        
+        currentHealth = maxHitPoints;
+
+        healthBar = GetComponent<CharacterHealth>();
+        if (healthBar)
+            healthBar.SetMaxHealth(currentHealth);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
 }
