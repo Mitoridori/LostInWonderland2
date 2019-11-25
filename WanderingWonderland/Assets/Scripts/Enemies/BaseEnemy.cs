@@ -26,6 +26,8 @@ public abstract class BaseEnemy : MonoBehaviour
 
     public abstract void Attack();
 
+    public abstract void Movement();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,11 +63,6 @@ public abstract class BaseEnemy : MonoBehaviour
                     break;
             }
         }
-    }
-
-    void Movement()
-    {
-
     }
 
     void CheckIfActive()

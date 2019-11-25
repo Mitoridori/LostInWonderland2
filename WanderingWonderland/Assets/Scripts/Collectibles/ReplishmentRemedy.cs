@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ReplishmentRemedy : BaseCollectible
 {
-    //don't remove
     public override void ApplyEffect()
     {
         //execute the functions from the player by calling player. (whatever function from the player)
