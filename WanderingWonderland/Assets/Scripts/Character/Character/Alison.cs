@@ -5,12 +5,16 @@ using UnityEngine;
 public class Alison : MonoBehaviour
 {
     public int maxHitPoints = 5;
+    public int baseDamage = 10;
     private CharacterHealth healthBar;
     private int currentHealth;
+    private int currentDamage;
+
 
     private void Start()
     {
         currentHealth = maxHitPoints;
+        currentDamage = baseDamage;
 
         healthBar = GetComponent<CharacterHealth>();
         if (healthBar)
@@ -18,7 +22,15 @@ public class Alison : MonoBehaviour
 
     }
 
+    void DamageInc(int DamgBon)
+    {
+        currentDamage = currentDamage + DamgBon;
+    }
 
+    void ResetDamage()
+    {
+        currentDamage = baseDamage;
+    }
 
 
 }
