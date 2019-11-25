@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedEnemy : MonoBehaviour
+public class RangedEnemy : BaseEnemy
 {
 
-    //don't remove
-    // Start is called before the first frame update
-    void Start()
+    public override void Attack()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Movement()
     {
         
     }
