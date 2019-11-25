@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : Health
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public RectTransform healthBar;
+
+
+    private void Update()
     {
-        
+        transform.LookAt(Camera.main.transform);
+        healthBar.sizeDelta = new Vector2(GetCurrentHealth(), healthBar.sizeDelta.y);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public abstract class Health : MonoBehaviour
 {
-    public Vector2 startPoint = Vector2.one;
-    public Texture icon;
-
     private int maxHealth = 0;
     private int currentHealth = 0;
 
@@ -24,5 +21,10 @@ public abstract class Health : MonoBehaviour
     public int GetCurrentHealth()
     {
         return currentHealth;
+    }
+
+    public float NormalizeHealth()
+    {
+        return (float)currentHealth / maxHealth;
     }
 }

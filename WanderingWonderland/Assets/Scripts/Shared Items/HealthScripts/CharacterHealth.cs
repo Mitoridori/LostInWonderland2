@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterHealth : Health
 {
     public int maxIconsPerRow = 5;
+    public Vector2 startPoint = Vector2.one;
+    public Texture icon;
 
     private void OnGUI()
     {
