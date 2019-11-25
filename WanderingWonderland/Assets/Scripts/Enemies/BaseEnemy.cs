@@ -25,7 +25,6 @@ public abstract class BaseEnemy : MonoBehaviour
     private EnemyStates state = EnemyStates.waiting;
 
     public abstract void Attack();
-    public abstract void Movement();
 
     // Start is called before the first frame update
     void Start()
@@ -62,10 +61,11 @@ public abstract class BaseEnemy : MonoBehaviour
                     break;
             }
         }
-        else if(state == EnemyStates.dead)
-        {
-            
-        }
+    }
+
+    void Movement()
+    {
+
     }
 
     void CheckIfActive()
