@@ -88,27 +88,18 @@ public class CharController : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
 
-            //if (moveDirection.magnitude > 0.05f)
-            //{
-            //    animController.SetBool("isWalking", true);
-            //}
-            //else
-            //{
-            //    animController.SetBool("isWalking", false);
-            //}
-
             if (moveDirection.z > 0)
             {
                 moveStatus = isWalking ? "walking" : "running";
                 animController.SetFloat("Speed", moveDirection.z);
             }
 
-            if (moveDirection.x > 0)
+            if (moveDirection.x < 0)
                { 
                 moveStatus = isWalking ? "walkingRight" : "runningRight";
-                animController.SetFloat("Speed", moveDirection.x);
+                animController.SetFloat("Speed", -moveDirection.x);
                 }
-            if (moveDirection.x < 0)
+            if (moveDirection.x > 0)
             {
                 moveStatus = isWalking ? "walkingLeft" : "runningLeft";
                 animController.SetFloat("Speed", moveDirection.x);
