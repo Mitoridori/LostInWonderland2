@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseWeapon : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
+
+    public int firingSpeed;
     public int damageValue;
-    public ModifyHealth healthMod;
+    Rigidbody rb;
+    Vector3 shootDirection;
+
+    
 
     // Start is called before the first frame update
     void Start()
