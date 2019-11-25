@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firingSpeed: 30
-  damageValue: 0
+  damageValue: 1
 --- !u!54 &54735394939696014
 Rigidbody:
   m_ObjectHideFlags: 0

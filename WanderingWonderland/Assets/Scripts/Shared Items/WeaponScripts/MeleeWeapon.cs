@@ -9,7 +9,7 @@ public class MeleeWeapon : BaseWeapon
     {
         if(other.gameObject.GetComponent<Health>())
         {
-            healthMod.TakeDamage(damageValue);
+            other.GetComponent<Health>().TakeDamage(damageValue);
         }
     }
 

@@ -19,9 +19,20 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void CollidedWithObject()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if((other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy") && other.GetComponent<Health>())
+        {
+            other.GetComponent<Health>().TakeDamage(damageValue);
+            print(other.GetComponent<Health>().GetCurrentHealth());
+        }
+        CollidedWithObject();
     }
 
 }
