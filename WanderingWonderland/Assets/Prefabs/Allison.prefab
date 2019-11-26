@@ -1174,9 +1174,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34471d254d95b534ebbdc4a4147b2b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxIconsPerRow: 5
   startPoint: {x: 1, y: 1}
-  icon: {fileID: 2800000, guid: d86b70340d23c0f4ea8d5e5acdd7b41b, type: 3}
+  images:
+  - {fileID: 2800000, guid: c672e72f701dda14ea20315038334e01, type: 3}
+  - {fileID: 2800000, guid: 66953fd6863ec874aa9495f35675c001, type: 3}
+  - {fileID: 2800000, guid: c6241b4240210cb4c87d78fa3f62ef5b, type: 3}
+  - {fileID: 2800000, guid: bfa3d1cbc34500744980d2b53a80feb6, type: 3}
+  - {fileID: 2800000, guid: 38b6e94b6a88f8643abf8c81e1ef639a, type: 3}
+  - {fileID: 2800000, guid: fcf73cb1a5df4984f999119fe2094866, type: 3}
+  - {fileID: 2800000, guid: f539c58378acf754eb218a4a95877582, type: 3}
+  - {fileID: 2800000, guid: da0a9b0937c29ba459650603e2e2d1f5, type: 3}
+  - {fileID: 2800000, guid: d8478e6018bbec447a05a90eda0a00ae, type: 3}
+  - {fileID: 2800000, guid: 2bb4c9f7ad8e40445b9005270c880582, type: 3}
 --- !u!114 &1879524674162492541
 MonoBehaviour:
   m_ObjectHideFlags: 0
