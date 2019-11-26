@@ -7,8 +7,7 @@ public class RangedEnemy : BaseEnemy
 
     public override void Attack()
     {
-        
-        if(weapon.GetComponent<RangedWeapon>())
+        if (weapon.GetComponent<RangedWeapon>())
         {
             weapon.GetComponent<RangedWeapon>().Attack();
         }

@@ -12,6 +12,8 @@ public abstract class BaseEnemy : MonoBehaviour
     CharController player;
     Health health;
     float nextAttack;
+    float turnSpeed = 1.0f;
+    float singleStep;
 
 
     private enum EnemyStates
@@ -52,6 +54,7 @@ public abstract class BaseEnemy : MonoBehaviour
                     CheckIfActive();
                     break;
                 case EnemyStates.attacking:
+                    CheckIfCanAttack();
                     StopAttacking();
                     break;
                 case EnemyStates.roaming:
@@ -62,6 +65,7 @@ public abstract class BaseEnemy : MonoBehaviour
                 default:
                     break;
             }
+            RotateEnemy();
         }
     }
 
@@ -77,7 +81,7 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         if(state == EnemyStates.attacking)
         {
-            if(Time.time > nextAttack)
+            if (Time.time > nextAttack)
             {
                 nextAttack = (Time.time + attackSpeed);
                 Attack();
@@ -91,6 +95,14 @@ public abstract class BaseEnemy : MonoBehaviour
         {
             state = EnemyStates.roaming;
         }
+    }
+
+    public void RotateEnemy()
+    {
+        Vector3 targetDirection = player.transform.position - transform.position;
+        singleStep = turnSpeed * Time.deltaTime;
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newDirection);
     }
 
     void FindTarget(float range)
