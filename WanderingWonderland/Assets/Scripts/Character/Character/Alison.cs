@@ -8,6 +8,9 @@ public class Alison : MonoBehaviour
     public int baseDamage = 10;
     private int PlayerCoins;
     public int PlayerStartCoins = 100;
+    private int PlayerWood;
+    public int PlayerStartWood = 10;
+
     public CharController CC;
     private CharacterHealth healthBar;
     private int currentHealth;
@@ -62,6 +65,17 @@ public class Alison : MonoBehaviour
     public int GetCoin()
     {
         return PlayerCoins;
+    }
+
+    public int SetWood(int amount)
+    {
+        amount = PlayerWood;
+        return PlayerWood;
+    }
+
+    public int GetWood()
+    {
+        return PlayerWood;
     }
 
 }
