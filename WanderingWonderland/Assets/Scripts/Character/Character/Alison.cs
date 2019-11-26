@@ -6,6 +6,8 @@ public class Alison : MonoBehaviour
 {
     public int maxHitPoints = 5;
     public int baseDamage = 10;
+    private int PlayerCoins;
+    public int PlayerStartCoins = 100;
     public CharController CC;
     private CharacterHealth healthBar;
     private int currentHealth;
@@ -13,10 +15,14 @@ public class Alison : MonoBehaviour
     private float BaseRunSpeed;
 
 
+
+
     private void Start()
     {
         currentHealth = maxHitPoints;
         currentDamage = baseDamage;
+        PlayerCoins = PlayerStartCoins;
+        
         CC = GetComponent<CharController>();
         if (CC)
         {
@@ -45,6 +51,17 @@ public class Alison : MonoBehaviour
     public void ResetSpeed()
     {
         CC.runSpeed = BaseRunSpeed;
+    }
+
+    public int SetCoin(int amount)
+    {
+        amount = PlayerCoins;
+        return PlayerCoins;
+    }
+
+    public int GetCoin()
+    {
+        return PlayerCoins;
     }
 
 }
