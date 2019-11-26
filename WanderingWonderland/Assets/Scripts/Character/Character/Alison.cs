@@ -22,7 +22,7 @@ public class Alison : MonoBehaviour
 
     }
 
-    void DamageInc(int DamgBon)
+    public void DamageInc(int DamgBon)
     {
         currentDamage = currentDamage + DamgBon;
     }
