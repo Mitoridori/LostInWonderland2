@@ -6,15 +6,7 @@ public class ReplishmentRemedy : BaseCollectible
 {
     public override void ApplyEffect()
     {
-        //execute the functions from the player by calling player. (whatever function from the player)
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            ApplyEffect();
-        }
+        health.Heal(amount);
     }
 
 }

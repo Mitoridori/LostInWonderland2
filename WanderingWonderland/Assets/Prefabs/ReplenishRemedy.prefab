@@ -4703,6 +4703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3680456601375418893}
   - component: {fileID: 3683291635203180749}
+  - component: {fileID: 114160412661570926}
   m_Layer: 0
   m_Name: ReplenishRemedy
   m_TagString: Untagged
@@ -4717,7 +4718,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3683420834683367877}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.37, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4740,6 +4741,20 @@ CapsuleCollider:
   m_Height: 0.71834666
   m_Direction: 1
   m_Center: {x: 0, y: 1.0752604, z: -0.0071157217}
+--- !u!114 &114160412661570926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683420834683367877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb4cf7a8fac45748803426995cf3259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  amount: 5
 --- !u!1 &3683420835185977235
 GameObject:
   m_ObjectHideFlags: 0
