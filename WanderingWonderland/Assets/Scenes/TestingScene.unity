@@ -374,6 +374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHitPoints: 100
   baseDamage: 10
+  PlayerStartCoins: 100
+  CC: {fileID: 0}
 --- !u!114 &314076539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,10 +1485,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5726727524601529311, guid: cb5e639f8ef850a4d9429f6098a12ee1,
+    - target: {fileID: 5726727524489473178, guid: cb5e639f8ef850a4d9429f6098a12ee1,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: TextTally
+      value: 
+      objectReference: {fileID: 5726727524544208350}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
+--- !u!114 &5726727524544208350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8070014348466489466, guid: cb5e639f8ef850a4d9429f6098a12ee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5726727524544208349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

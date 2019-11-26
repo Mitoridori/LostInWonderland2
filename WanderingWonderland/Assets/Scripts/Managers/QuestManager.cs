@@ -8,11 +8,12 @@ public class QuestManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI TextDetails;
-   
+    public TextMeshProUGUI TextTally;
+
 
     void Start()
     {
-        TextDetails.text = "Quest log is currently empty.";
+        NoQuestFound();
 
 
     }
@@ -20,11 +21,17 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
     {
-        TextDetails.text = "s" ; //something grabbing the current text info
+        
+    }
+
+    void NoQuestFound()
+    {
+        TextDetails.text = "Quest log is currently empty.";
+        TextTally.text = " ";
     }
 }
