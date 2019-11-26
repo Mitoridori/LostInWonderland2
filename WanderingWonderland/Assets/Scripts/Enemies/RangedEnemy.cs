@@ -8,6 +8,10 @@ public class RangedEnemy : BaseEnemy
     public override void Attack()
     {
         
+        if(weapon.GetComponent<RangedWeapon>())
+        {
+            weapon.GetComponent<RangedWeapon>().Attack();
+        }
     }
 
     public override void Movement()

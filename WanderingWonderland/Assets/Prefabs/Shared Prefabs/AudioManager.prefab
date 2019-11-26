@@ -45,8 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: e076530e129959b4c8222a0546066e34, type: 2}
   settings:
-  - exposedParam: masterVolume
-    slider: {fileID: 0}
   - exposedParam: musicVolume
     slider: {fileID: 0}
   - exposedParam: sfxVolume
