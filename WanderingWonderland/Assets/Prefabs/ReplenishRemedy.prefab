@@ -4754,7 +4754,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 0}
+  alison: {fileID: 0}
   amount: 5
+  duration: 60
 --- !u!1 &3683420835185977235
 GameObject:
   m_ObjectHideFlags: 0

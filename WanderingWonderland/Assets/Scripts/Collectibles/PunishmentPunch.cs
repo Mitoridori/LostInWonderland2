@@ -6,15 +6,11 @@ public class PunishmentPunch : BaseCollectible
 {
     public override void ApplyEffect()
     {
-        //execute the functions from the player by calling player. (whatever function from the player)
+        alison.DamageInc(amount);
+        alison.Invoke("ResetDamage", duration);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            ApplyEffect();
-        }
-    }
+
+
 
 }

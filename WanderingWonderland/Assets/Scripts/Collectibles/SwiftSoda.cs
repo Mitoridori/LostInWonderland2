@@ -6,15 +6,11 @@ public class SwiftSoda : BaseCollectible
 {
     public override void ApplyEffect()
     {
-        //execute the functions from the player by calling player. (whatever function from the player)
+        alison.IncreaseSpeed(amount);
+        //Puts speed back to normal after specified time
+        alison.Invoke("ResetSpeed", duration);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            ApplyEffect();
-        }
-    }
+   
 
 }
