@@ -6,5 +6,5 @@ public abstract class BaseWeapon : MonoBehaviour
 {
     public int damageValue;
 
-    
+    public abstract void Attack();
 }
