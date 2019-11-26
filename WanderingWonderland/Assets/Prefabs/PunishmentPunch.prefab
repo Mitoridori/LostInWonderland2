@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6521615875873369292}
   - component: {fileID: 6595056658097720308}
   - component: {fileID: 7873860134469494886}
+  - component: {fileID: 825151181797443857}
   m_Layer: 0
   m_Name: PunishmentPunch
   m_TagString: Untagged
@@ -107,9 +108,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6543736112792042574}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.07218337
   m_Height: 0.27408254
   m_Direction: 1
   m_Center: {x: 0.0009002164, y: 0.13660106, z: -0.0017584302}
+--- !u!114 &825151181797443857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543736112792042574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027d343881ba30147ad063e6b8ba91fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  alison: {fileID: 0}
+  amount: 10
+  duration: 60
