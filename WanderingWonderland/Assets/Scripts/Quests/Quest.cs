@@ -2,15 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-public class Quest : MonoBehaviour
+public abstract class Quest : MonoBehaviour
 {
-    public List<QuestGoal> Goals { get; set; } = new List<QuestGoal>();
-    public string QuestName { get; set; }
-    public string Description { get; set; }
-    public int ExperenceRewart { get; set; }
-    //public Item ItemRewart { get; set; }
-    public bool Completed { get; set; }
+    public QuestUIManager QUIM;
 
+    public List<QuestGoal> Goals = new List<QuestGoal>();
+    public string QuestName;
+    public string Description;
+    public int ExperenceReward;  
+    public bool Completed;
+    protected int RequiredAmount;
+    protected int CurrentAmount;
+
+
+    public abstract void StartText();
+    public abstract void InprogressText();
+    public abstract void CompletedText();
+    void Start()
+    {
+        QUIM = FindObjectOfType<QuestUIManager>();
+
+    }
     public void CheckGoals()
     {
         Completed = Goals.All(g => g.Completed);
@@ -22,5 +34,7 @@ public class Quest : MonoBehaviour
         //if (ItemReward != null)
         //    InventoryController.Instance.GiveItem(ItemReward);
     }
+
+    
 
 }

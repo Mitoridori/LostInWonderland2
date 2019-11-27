@@ -7,6 +7,7 @@ public abstract class NPCController : MonoBehaviour
 
     public GameObject NPCTextBox;
     bool NPCClick = false;
+    
 
     public abstract void Interact();
 
@@ -27,6 +28,7 @@ public abstract class NPCController : MonoBehaviour
     {
         NPCTextBox.SetActive(true);
         NPCClick = true;
+        Interact();
     }
     public void QuestGiverMenuOff()
     {

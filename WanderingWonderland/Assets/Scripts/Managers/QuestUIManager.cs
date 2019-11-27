@@ -16,10 +16,8 @@ public class QuestUIManager : MonoBehaviour
 
 
     void Start()
-    {
-        
+    {   
        NoQuestFound();
-
     }
 
     // Update is called once per frame
