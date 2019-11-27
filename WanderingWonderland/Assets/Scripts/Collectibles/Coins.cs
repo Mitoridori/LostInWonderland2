@@ -4,22 +4,19 @@ using UnityEngine;
 
 
 public class Coins : BaseCollectible
-    
 {
-    private void Awake()
-    {
-        alison = FindObjectOfType<Alison>();
 
-    }
+    public int worth;
+
+
     public override void ApplyEffect()
     {
-
+        PickupCoins(worth);
     }
 
     void PickupCoins(int amount)
     {
-        int i = alison.GetCoin() + amount;
-        alison.SetCoin(i);
+        alison.SetCoin(amount);
     }
     void UseCoins(int amount)
     {

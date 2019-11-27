@@ -22,8 +22,14 @@ public class Alison : MonoBehaviour
     {
         currentHealth = maxHitPoints;
         currentDamage = baseDamage;
-        PlayerCoins = PlayerStartCoins;
-        
+        if(PlayerPrefs.GetInt("MoneyAmount") >= PlayerStartCoins)
+        {
+            PlayerCoins = PlayerPrefs.GetInt("MoneyAmount");
+        } else
+        {
+            PlayerCoins = PlayerStartCoins;
+        }
+
         CC = GetComponent<CharController>();
         if (CC)
         {
@@ -54,10 +60,10 @@ public class Alison : MonoBehaviour
         CC.runSpeed = BaseRunSpeed;
     }
 
-    public int SetCoin(int amount)
+    public void SetCoin(int amount)
     {
-        amount = PlayerCoins;
-        return PlayerCoins;
+        PlayerCoins += amount;
+        PlayerPrefs.SetInt("MoneyAmount", PlayerCoins);
     }
 
     public int GetCoin()
