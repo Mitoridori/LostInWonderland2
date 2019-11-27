@@ -25,7 +25,7 @@ public class PlayerInventory : MonoBehaviour
 
     void UpdateCoinCount()
     {
-        if (alison)
-        CoinText.text = alison.GetCoin().ToString();
+        if (alison && CoinText)
+            CoinText.text = alison.GetCoin().ToString();
     }
 }
