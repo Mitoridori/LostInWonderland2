@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//would like to also host the ability for the character to turn and face the NPC without moving towards them, and give a greeting
 public class NPCController : MonoBehaviour
 {
 
