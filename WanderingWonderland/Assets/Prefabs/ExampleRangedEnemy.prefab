@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSpeed: 4
   weapon: {fileID: 4771279101106925899}
-  attackRange: 30
+  attackRange: 10
 --- !u!1 &5615667681850620476
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,10 +146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4769563694358049905}
     m_Modifications:
-    - target: {fileID: 1717406733745140, guid: d03c4353fda446d4f8df56d422578d64, type: 3}
-      propertyPath: m_Name
-      value: Wooden Bow
-      objectReference: {fileID: 0}
     - target: {fileID: 4620178347958848, guid: d03c4353fda446d4f8df56d422578d64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.003
@@ -193,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 4620178347958848, guid: d03c4353fda446d4f8df56d422578d64, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717406733745140, guid: d03c4353fda446d4f8df56d422578d64, type: 3}
+      propertyPath: m_Name
+      value: Wooden Bow
       objectReference: {fileID: 0}
     - target: {fileID: 114902099050628752, guid: d03c4353fda446d4f8df56d422578d64,
         type: 3}

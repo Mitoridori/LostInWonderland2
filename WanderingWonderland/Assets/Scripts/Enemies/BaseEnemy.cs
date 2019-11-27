@@ -11,6 +11,7 @@ public abstract class BaseEnemy : MonoBehaviour
 
     CharController player;
     Health health;
+    EnemyRoaming movement;
     float nextAttack;
     float turnSpeed = 1.0f;
     float singleStep;
@@ -35,6 +36,7 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         player = FindObjectOfType<CharController>();
         health = GetComponent<Health>();
+        movement = GetComponent<EnemyRoaming>();
         nextAttack = Time.time;
     }
 
