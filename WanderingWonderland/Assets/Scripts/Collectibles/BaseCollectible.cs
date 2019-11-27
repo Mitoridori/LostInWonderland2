@@ -8,6 +8,7 @@ public abstract class BaseCollectible : MonoBehaviour
     public Alison alison;
     public int amount;
     public int duration;
+    public int Cost;
     
     public abstract void ApplyEffect();
 

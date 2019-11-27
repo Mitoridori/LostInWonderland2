@@ -6,6 +6,7 @@ public class PunishmentPunch : BaseCollectible
 {
     public override void ApplyEffect()
     {
+        
         alison.DamageInc(amount);
         alison.Invoke("ResetDamage", duration);
     }

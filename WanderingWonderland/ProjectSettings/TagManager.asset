@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - QuestGiver
   - NPCTalk
+  - Collectable
   layers:
   - Default
   - TransparentFX

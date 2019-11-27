@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 14ffd7be1d483e649b506fb7b5aa4246
+guid: eaf91b467b9b4204d9686be9179e1f9b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -135,7 +135,7 @@ ModelImporter:
     400126: Spine
     400128: Spine1
     400130: Spine2
-    7400000: BossIdle
+    7400000: BossWalk
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -166,10 +166,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: BossIdle
+      name: BossWalk
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 98
+      lastFrame: 114
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
