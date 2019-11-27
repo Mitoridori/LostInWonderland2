@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 //would like to also host the ability for the character to turn and face the NPC without moving towards them, and give a greeting
-public class NPCController : MonoBehaviour
+public abstract class NPCController : MonoBehaviour
 {
 
     public GameObject NPCQuestLog;
     bool NPCClick = false;
 
+    public abstract void Interact();
 
     // Start is called before the first frame update
     void Start()
     {
-        NPCQuestLog.SetActive(false);
+        
     }
 
     // Update is called once per frame

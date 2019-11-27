@@ -17,7 +17,7 @@ public class Quest : MonoBehaviour
         //can change dilog here is wanted
     }
 
-    private void GiveReward()
+    public void GiveReward()
     {
         //if (ItemReward != null)
         //    InventoryController.Instance.GiveItem(ItemReward);

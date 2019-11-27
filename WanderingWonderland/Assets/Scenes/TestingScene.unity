@@ -1002,18 +1002,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2701e90d0b6f34945881a69280981c5b, type: 3}
---- !u!114 &969971453 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1616097700350253206, guid: 76eacd0021a94974caed86ef69fbdbe1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1589245349}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d304b61c7dcafe4ca767a344bdb31ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1081852125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1463,8 +1451,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1616097700350253206, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
+--- !u!1 &1589245350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5172665581333476532, guid: 76eacd0021a94974caed86ef69fbdbe1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1589245349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1589245351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589245350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d101378d1b5234db7712e01308a42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCQuestLog: {fileID: 0}
+  quests: {fileID: 0}
+  questType: 
 --- !u!1 &1673987800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,7 +1923,7 @@ PrefabInstance:
     - target: {fileID: 231287041, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 969971453}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
 --- !u!114 &5726727524544208351 stripped
