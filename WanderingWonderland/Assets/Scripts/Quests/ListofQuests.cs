@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ListofQuests : MonoBehaviour
 {
     //Quest Information
     public List<GameObject> QuestList;
-    int index;
+    public int index;
     bool gameIsWon = false;
 
-
+    GameObject CurrentQuest;
 
 
 
@@ -19,9 +20,12 @@ public class ListofQuests : MonoBehaviour
     {
         if (QuestList.Count != 0)
         {
-            QuestList[0].SetActive(true);
+            CurrentQuest = QuestList[0];
+            CurrentQuest.SetActive(true);
+            //QuestList[0].SetActive(true);
             index = 0;
         }
+        //CurrentQuest = QuestList[index];
     }
 
     private void Update()
@@ -36,7 +40,7 @@ public class ListofQuests : MonoBehaviour
     {
         if (gameIsWon == false)
         {
-            switch (QuestList[index].activeInHierarchy)
+            switch (CurrentQuest.activeInHierarchy)
             {
                 case true:
                     break;
@@ -74,5 +78,10 @@ public class ListofQuests : MonoBehaviour
         {
             //what to do when game is over.
         }
+    }
+
+    public void GetStartScripts()
+    {
+        //CurrentQuest.QuestInstuctions();
     }
 }
