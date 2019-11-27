@@ -13,9 +13,9 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if(rb)
+        if (rb)
         {
-            rb.velocity = transform.up * firingSpeed;
+            rb.velocity = Quaternion.LookRotation(transform.up, -transform.forward) * firingSpeed;
         }
     }
 

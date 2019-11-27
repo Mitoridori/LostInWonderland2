@@ -17,7 +17,7 @@ public class RangedWeapon : BaseWeapon
     public override void Attack()
     {
         bullet = BulletPool.sharedInstance.GetObjectPool("Arrow");
-        if(bullet)
+        if (bullet)
         {
             bullet.transform.position = firingPoint.transform.position;
             bullet.transform.rotation = firingPoint.transform.rotation;
