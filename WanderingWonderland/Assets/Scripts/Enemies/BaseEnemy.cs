@@ -8,6 +8,7 @@ public abstract class BaseEnemy : MonoBehaviour
     public float attackSpeed = 3f;
     public GameObject weapon;
     public int attackRange;
+    protected EnemyRoaming enemyMovement;
 
     CharController player;
     Health health;
@@ -35,6 +36,7 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         player = FindObjectOfType<CharController>();
         health = GetComponent<Health>();
+        enemyMovement = GetComponent<EnemyRoaming>();
         nextAttack = Time.time;
     }
 

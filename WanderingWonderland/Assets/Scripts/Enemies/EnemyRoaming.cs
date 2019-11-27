@@ -14,7 +14,7 @@ public class EnemyRoaming : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    private void Update()
+    public void RoamingPath()
     {
         agent.SetDestination(target.position);
     }

@@ -15,6 +15,9 @@ public class RangedEnemy : BaseEnemy
 
     public override void Movement()
     {
-        
+        if(enemyMovement)
+        {
+            enemyMovement.RoamingPath();
+        }
     }
 }
