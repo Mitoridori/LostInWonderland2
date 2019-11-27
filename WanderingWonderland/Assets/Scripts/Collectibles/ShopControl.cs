@@ -25,7 +25,7 @@ public class NewBehaviourScript : Alison
     // Start is called before the first frame update
     void Start()
     {
-        PlayerCoins = PlayerPrefs.GetInt("MoneyAmount);");
+        
     }
 
     // Update is called once per frame
@@ -34,10 +34,11 @@ public class NewBehaviourScript : Alison
         coinAmountText.text = "COINS: " + PlayerCoins.ToString();
         isSwiftSodaIsSold = PlayerPrefs.GetInt("IsReplenishRemedySold");
 
-        if (PlayerCoins >= && isSwiftSodaIsSold == 0)
-            buyButton.interactable = true;
-        else
-            buyButton.interactable = false;
+        //if (PlayerCoins >= && isSwiftSodaIsSold == 0)
+        //    buyButton.interactable = true;
+        //else
+        //    buyButton.interactable = false;
+    }
 
     void buyRemedy()
     {
@@ -52,11 +53,11 @@ public class NewBehaviourScript : Alison
             //Load whatever scene we want here: SceneManager.LoadScene ("GameScene")
 
     }
-    void resetPlayerPrefs()
-        PlayerCoins = amount;
-        buyButton.gameObject.SetActive(true);
 
+    //void resetPlayerPrefs()
+    //{
+    //    PlayerCoins = amount;
+    //    buyButton.gameObject.SetActive(true);
+    //}
 
-
-    }
 }
