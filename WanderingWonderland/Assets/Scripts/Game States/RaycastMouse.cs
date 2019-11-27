@@ -13,10 +13,19 @@ public class RaycastMouse : MonoBehaviour
     public Texture2D iconInteract;
     public Vector2 interactRegPoint;
 
+    //QuestGiver
+    public Texture2D iconQuestionMark;
+    public Vector2 QuestionRegPoint;
+    public Texture2D iconExclamation;
+    public Vector2 ExclamationRegPoint;
+
+    //other stuff
+    
     private Vector2 mouseReg;
     private Vector2 mouseCoord;
     private Texture mouseTex;
 
+    //Cursor Look
     private void OnDisable()
     {
         Cursor.visible = true;
@@ -26,8 +35,6 @@ public class RaycastMouse : MonoBehaviour
     {
         Cursor.visible = false;
     }
-
-
     private void OnGUI()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -42,15 +49,16 @@ public class RaycastMouse : MonoBehaviour
                     mouseReg = attackingRegPoint;
                     break;
 
-                case "NPC":
+                case "NPCTalk":
                     mouseTex = iconTalk;
                     mouseReg = talkRegPoint;
                     break;
 
-                case "Interact":
-                    mouseTex = iconInteract;
-                    mouseReg = interactRegPoint;
+                case "QuestGiver":
+                    mouseTex = iconQuestionMark;
+                    mouseReg = QuestionRegPoint;
                     break;
+
                 default:
                     mouseTex = iconArrow;
                     mouseReg = arrowRegPoint;
@@ -68,4 +76,6 @@ public class RaycastMouse : MonoBehaviour
         GUI.DrawTexture(new Rect(mouseCoord.x - mouseReg.x, Screen.height - mouseCoord.y - mouseReg.y, mouseTex.width, mouseTex.height), mouseTex, ScaleMode.StretchToFill, true, 10.0f);
 
     }
+
+
 }

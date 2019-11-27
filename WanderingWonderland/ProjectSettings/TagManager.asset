@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Arrow
   - NPC
+  - QuestGiver
+  - NPCTalk
   layers:
   - Default
   - TransparentFX
