@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class QuestManager : MonoBehaviour
+public class QuestUIManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI TextDetails;
@@ -19,9 +19,7 @@ public class QuestManager : MonoBehaviour
     {
         
        NoQuestFound();
-       QuestNPC = FindObjectOfType<ListofQuests>();
-        if (QuestNPC)
-            Debug.Log("Quest NPC found");
+
     }
 
     // Update is called once per frame
@@ -32,13 +30,6 @@ public class QuestManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (QuestNPC.QuestList.Count != 0)
-        {
-            //pass through quest info
-        }
-        else
-            NoQuestFound();
-
 
 
     }
