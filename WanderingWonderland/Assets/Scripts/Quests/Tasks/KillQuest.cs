@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BanditQuest : QuestGoal
+public class KillQuest : QuestGoal
 {
     public int EnemyID { get; set; }
 
-    public BanditQuest(Quest quest, int enemyID, string description, bool completed, int currentAmount, int requiredAmount)
+    public KillQuest(Quest quest, int enemyID, string description, bool completed, int currentAmount, int requiredAmount)
     {
         this.Quest = quest;
         this.EnemyID = enemyID;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class QuestGiver : NPCController
 {
+    QuestUIManager QUIM;
+
     public bool AssignedQuest { get; set; }
     public bool Helped { get; set; } //quest to hand in
 
@@ -14,11 +16,21 @@ public class QuestGiver : NPCController
 
     public Quest Quest { get; set; }
 
+    void Awake()
+    {
+        QUIM = FindObjectOfType<QuestUIManager>();
+
+    }
     public override void Interact()
     {
         
         if (!AssignedQuest && !Helped)
         {
+            if (QUIM)
+               { 
+                QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
+                QUIM.NPCBoxTwo.text = "Will you please help me out with my quest?";
+                }
 
             AssignQuest();
         }
@@ -37,6 +49,7 @@ public class QuestGiver : NPCController
     {
         AssignedQuest = true;
         Quest = (Quest)quests.AddComponent(System.Type.GetType(questType));
+        Quest.StartText();
     }
 
     void CheckQuest()
@@ -46,12 +59,12 @@ public class QuestGiver : NPCController
             Quest.GiveReward();
             Helped = true;
             AssignedQuest = false;
+            Quest.CompletedText();
 
-            //DialogueSystem.Instance.AddNewDialog(new string[] { "Thanks for that! here's your reward." }, name);
         }
         else
         {
-            //DialogueSystem.Instance.AddNewDialog(new string[] { "Your not done yet!" }, name);
+            Quest.InprogressText();
         }
     }
 }
