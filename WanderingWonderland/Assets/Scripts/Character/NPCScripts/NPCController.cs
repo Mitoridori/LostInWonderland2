@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class NPCController : MonoBehaviour
 {
 
-    public GameObject NPCQuestLog;
+    public GameObject NPCTextBox;
     bool NPCClick = false;
 
     public abstract void Interact();
@@ -25,12 +25,12 @@ public abstract class NPCController : MonoBehaviour
     //Interactions with NPC
     void QuestGiverMenuOn()
     {
-        NPCQuestLog.SetActive(true);
+        NPCTextBox.SetActive(true);
         NPCClick = true;
     }
     public void QuestGiverMenuOff()
     {
-        NPCQuestLog.SetActive(false);
+        NPCTextBox.SetActive(false);
         NPCClick = false;
     }
 
