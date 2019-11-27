@@ -5,7 +5,6 @@ using UnityEngine;
 public class QuestGiver : NPCController
 {
     QuestUIManager QUIM;
-
     public bool AssignedQuest { get; set; }
     public bool Helped { get; set; } //quest to hand in
 
@@ -40,7 +39,12 @@ public class QuestGiver : NPCController
         }
         else
         {
-            //DialogueSystem.Instance.AddNewDialog(new string[] { "Thanks for that!" }, name);
+            if (QUIM)
+            {
+                QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
+                QUIM.NPCBoxTwo.text = "Thanks for all your help again.";
+            }
+
         }
 
     }

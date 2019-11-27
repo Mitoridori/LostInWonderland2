@@ -15,7 +15,7 @@ public class Slayer : Quest
         RequiredAmount = 1;
         CurrentAmount = 0;
 
-        Goals.Add(new KillQuest(this, 0, "Kill " + RequiredAmount + " Beast", false, CurrentAmount, RequiredAmount));
+        Goals.Add(new KillQuest(this, "wood", "Kill " + RequiredAmount + " Beast", false, CurrentAmount, RequiredAmount));
         //Goals.Add(new KillQuest(this, 1, "Kill 2 vampires", false, 0, 2));
 
         Goals.ForEach(g => g.Init());

@@ -26,7 +26,7 @@ public abstract class Quest : MonoBehaviour
     public void CheckGoals()
     {
         Completed = Goals.All(g => g.Completed);
-        //can change dilog here is wanted
+     
     }
 
     public void GiveReward()

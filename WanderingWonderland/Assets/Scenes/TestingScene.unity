@@ -609,6 +609,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f08c1e18e3fd2b438baf97a89b44f8e, type: 3}
+--- !u!1 &462229051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462229052}
+  m_Layer: 0
+  m_Name: Quests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &462229052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462229051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 266.54193, y: 0.9304256, z: 197.4313}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &684667598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,6 +1387,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c6bba77413370b469adb3b6233d098e, type: 3}
+--- !u!114 &1554739754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1589245349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d101378d1b5234db7712e01308a42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1571822164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1477,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoozyQuestNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 1616097700350253206, guid: 76eacd0021a94974caed86ef69fbdbe1,
+        type: 3}
+      propertyPath: NPCQuestLog
+      value: 
+      objectReference: {fileID: 2040478660}
     - target: {fileID: 5172665581333309588, guid: 76eacd0021a94974caed86ef69fbdbe1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1490,11 +1537,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1616097700350253206, guid: 76eacd0021a94974caed86ef69fbdbe1,
-        type: 3}
-      propertyPath: NPCQuestLog
+    - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
+      propertyPath: NPCTextBox
       value: 
       objectReference: {fileID: 2040478660}
+    - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
+      propertyPath: quests
+      value: 
+      objectReference: {fileID: 462229051}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
 --- !u!1 &1589981531
@@ -2109,15 +2159,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5726727524601529311, guid: cb5e639f8ef850a4d9429f6098a12ee1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 231287041, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1554739754}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
 --- !u!114 &5726727524544208351 stripped

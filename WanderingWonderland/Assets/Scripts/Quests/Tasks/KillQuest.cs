@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class KillQuest : QuestGoal
 {
-    public int EnemyID { get; set; }
+    public string EnemyID { get; set; }
 
-    public KillQuest(Quest quest, int enemyID, string description, bool completed, int currentAmount, int requiredAmount)
+    public KillQuest(Quest quest, string enemyID, string description, bool completed, int currentAmount, int requiredAmount)
     {
         this.Quest = quest;
         this.EnemyID = enemyID;
