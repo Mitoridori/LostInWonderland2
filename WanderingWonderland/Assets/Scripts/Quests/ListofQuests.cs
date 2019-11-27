@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class ListofQuests : MonoBehaviour
 {
-
+    //Quest Information
     public List<GameObject> QuestList;
     int index;
     bool gameIsWon = false;
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +22,6 @@ public class ListofQuests : MonoBehaviour
             QuestList[0].SetActive(true);
             index = 0;
         }
-
     }
 
     private void Update()
@@ -25,7 +30,6 @@ public class ListofQuests : MonoBehaviour
         {
             SwitchPhase();
         }
-
     }
 
     void SwitchPhase()
