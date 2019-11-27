@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         if (rb)
         {
- //           rb.velocity = Quaternion.LookRotation(transform.up, -transform.forward) * firingSpeed;
+            rb.velocity = transform.up * firingSpeed;
         }
     }
 
@@ -30,7 +30,6 @@ public class Bullet : MonoBehaviour
         if(other.GetComponent<Health>())
         {
             other.GetComponent<Health>().TakeDamage(damageValue);
-            print(other.GetComponent<Health>().GetCurrentHealth());
         }
         CollidedWithObject();
     }
