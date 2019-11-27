@@ -396,9 +396,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d101378d1b5234db7712e01308a42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCQuestLog: {fileID: 0}
+  NPCTextBox: {fileID: 0}
   quests: {fileID: 0}
-  questType: 
+  questType: Slayer
 --- !u!1 &5172665581333476534
 GameObject:
   m_ObjectHideFlags: 0
