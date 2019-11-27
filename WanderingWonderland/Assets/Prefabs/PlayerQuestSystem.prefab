@@ -1320,6 +1320,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextDetails: {fileID: 5726727524343363506}
   TextTally: {fileID: 8070014348466489466}
+  NPCBoxOne: {fileID: 1714385486}
+  NPCBoxTwo: {fileID: 1824282754}
 --- !u!1 &5726727524601529308
 GameObject:
   m_ObjectHideFlags: 0
