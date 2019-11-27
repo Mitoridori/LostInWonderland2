@@ -26,7 +26,7 @@ public class QuestManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+       
     }
 
     void NoQuestFound()

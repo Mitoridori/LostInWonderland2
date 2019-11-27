@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 3481730692468696223}
   m_Layer: 0
   m_Name: DoozyQuestNPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,7 +338,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5172665581333476532}
-  m_LocalRotation: {x: -0, y: -0.8502348, z: -0, w: 0.52640367}
+  m_LocalRotation: {x: 0, y: -0.85023284, z: 0, w: 0.5264069}
   m_LocalPosition: {x: 265.9489, y: 0.07, z: 199.01646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -396,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0798fe4d9c134f14bb989bbf4fbd0fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestList: []
 --- !u!1 &5172665581333476534
 GameObject:
   m_ObjectHideFlags: 0

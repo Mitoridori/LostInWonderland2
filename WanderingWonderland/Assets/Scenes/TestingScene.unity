@@ -427,6 +427,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinText: {fileID: 5726727524544208351}
+--- !u!1 &345980807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 345980809}
+  - component: {fileID: 345980808}
+  m_Layer: 0
+  m_Name: cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &345980808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345980807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24cc23a231f3ad4a9043e09a1b9d676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconArrow: {fileID: 2800000, guid: 8ea795c067613354898068091ffc7130, type: 3}
+  arrowRegPoint: {x: 0, y: 0}
+  iconAttack: {fileID: 2800000, guid: 2d18e23e3ce249b4489b8bcdd02d3f48, type: 3}
+  attackingRegPoint: {x: 0, y: 0}
+  iconTalk: {fileID: 2800000, guid: 96d4bfdb0d6d8c042bf8fccf6524d239, type: 3}
+  talkRegPoint: {x: 0, y: 0}
+  iconInteract: {fileID: 2800000, guid: 8ea795c067613354898068091ffc7130, type: 3}
+  interactRegPoint: {x: 0, y: 0}
+--- !u!4 &345980809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345980807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 267.08884, y: 0.95519, z: 197.11652}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &377544818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1333,10 +1384,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 100008, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -1354,26 +1401,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 100028, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 100086, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 100148, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 100152, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 100156, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 100160, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -1428,6 +1455,30 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
       propertyPath: m_WarningMessage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100086, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100148, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100152, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100156, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100160, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
@@ -1498,16 +1549,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5726727524601529311, guid: cb5e639f8ef850a4d9429f6098a12ee1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5726727524489473178, guid: cb5e639f8ef850a4d9429f6098a12ee1,
         type: 3}
       propertyPath: TextTally
       value: 
       objectReference: {fileID: 5726727524544208350}
+    - target: {fileID: 5726727524601529311, guid: cb5e639f8ef850a4d9429f6098a12ee1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
 --- !u!114 &5726727524544208350 stripped
