@@ -9,7 +9,7 @@ public abstract class BaseCollectible : MonoBehaviour
     public int amount;
     public int duration;
     public int Cost;
-    
+
     public abstract void ApplyEffect();
 
     private void OnTriggerEnter(Collider other)
@@ -21,6 +21,7 @@ public abstract class BaseCollectible : MonoBehaviour
         {
             ApplyEffect();
             gameObject.SetActive(false);
+
         }
 
     }

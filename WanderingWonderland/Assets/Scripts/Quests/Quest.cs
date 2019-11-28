@@ -7,17 +7,19 @@ public abstract class Quest : MonoBehaviour
     public QuestUIManager QUIM;
 
     public List<QuestGoal> Goals = new List<QuestGoal>();
-    public string QuestName;
-    public string Description;
-    public int ExperenceReward;  
-    public bool Completed;
-    protected int RequiredAmount;
-    protected int CurrentAmount;
+    public string QuestName { get; set; }
+    public string Description { get; set; }
+    public int ExperenceReward { get; set; }  
+    public bool Completed { get; set; }
+    public int RequiredAmount { get; set; }
+    public int CurrentAmount { get; set; }
 
 
     public abstract void StartText();
+    public abstract void TrackingQuest();
     public abstract void InprogressText();
     public abstract void CompletedText();
+
     void Start()
     {
         QUIM = FindObjectOfType<QuestUIManager>();
@@ -25,8 +27,11 @@ public abstract class Quest : MonoBehaviour
     }
     public void CheckGoals()
     {
-        Completed = Goals.All(g => g.Completed);
-     
+        
+        //code to check all tasks are done... isn't working for some reason. 
+        //Completed = Goals.All(g => g.Completed);
+
+
     }
 
     public void GiveReward()

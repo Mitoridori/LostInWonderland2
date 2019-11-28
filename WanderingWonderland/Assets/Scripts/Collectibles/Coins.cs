@@ -31,6 +31,4 @@ public class Coins : BaseCollectible
             alison.SetCoin(i);
         }
     }
-
-    
 }

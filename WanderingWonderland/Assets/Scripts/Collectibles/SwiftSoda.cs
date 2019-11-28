@@ -11,6 +11,4 @@ public class SwiftSoda : BaseCollectible
         alison.Invoke("ResetSpeed", duration);
     }
 
-   
-
 }

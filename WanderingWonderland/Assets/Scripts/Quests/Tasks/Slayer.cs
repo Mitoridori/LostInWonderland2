@@ -16,7 +16,7 @@ public class Slayer : Quest
         CurrentAmount = 0;
 
         Goals.Add(new KillQuest(this, "wood", "Kill " + RequiredAmount + " Beast", false, CurrentAmount, RequiredAmount));
-        //Goals.Add(new KillQuest(this, 1, "Kill 2 vampires", false, 0, 2));
+
 
         Goals.ForEach(g => g.Init());
 
@@ -28,8 +28,17 @@ public class Slayer : Quest
         {
             QUIM.NPCBoxOne.text = "Welcome Alison,";
             QUIM.NPCBoxTwo.text = "we are having issues with a large beast, can you slay it for us?";
-            QUIM.TextDetails.text = "Slay" + RequiredAmount + "Beast";
+            QUIM.TextDetails.text = "Slay " + RequiredAmount + " Beast";
             QUIM.TextTally.text = CurrentAmount + " / " + RequiredAmount ;
+        }
+    }
+
+    public override void TrackingQuest()
+    {
+        if (QUIM)
+        {
+            QUIM.TextDetails.text = "Slay " + RequiredAmount + " Beast";
+            QUIM.TextTally.text = this.CurrentAmount + " / " + RequiredAmount;
         }
     }
     public override void InprogressText()

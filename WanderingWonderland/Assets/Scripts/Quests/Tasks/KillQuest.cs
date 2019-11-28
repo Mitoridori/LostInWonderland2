@@ -20,15 +20,15 @@ public class KillQuest : QuestGoal
     public override void Init()
     {
         base.Init();
-        //CombatEvents.OnEnemyDeath += EnemyDied;
+        QuestEvents.OnEnemyDeath += EnemyDied;
     }
 
-    void EnemyDied(/*IEnemy enemy*/)
+    void EnemyDied(IQuestID enemy)
     {
-        //if (enemy.ID == this.EnemyID)
-        //{
-        //    this.CurrentAmount++;
-        //    Evaluate();
-        //}
+        if (enemy.ID == this.EnemyID)
+        {
+            this.CurrentAmount++;
+            Evaluate();
+        }
     }
 }

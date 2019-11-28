@@ -17,14 +17,17 @@ public class QuestGoal
 
     public void Evaluate()
     {
+        Quest.CurrentAmount = CurrentAmount;
         if (CurrentAmount >= RequiredAmount)
             Complete();
     }
 
     public void Complete()
     {
-        Quest.CheckGoals();
         Completed = true;
+        Quest.Completed = true;
+        //Quest.CheckGoals();
+
     }
 
 

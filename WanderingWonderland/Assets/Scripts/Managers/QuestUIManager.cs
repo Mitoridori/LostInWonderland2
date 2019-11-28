@@ -12,26 +12,24 @@ public class QuestUIManager : MonoBehaviour
     public TextMeshProUGUI NPCBoxOne;
     public TextMeshProUGUI NPCBoxTwo;
 
-    ListofQuests QuestNPC;
-
+    QuestGiver QG;
 
     void Start()
-    {   
+    {
+        QG = FindObjectOfType<QuestGiver>();
+
        NoQuestFound();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (QG && QG.AssignedQuest)
+            QG.Quest.TrackingQuest();
+        else
+            NoQuestFound();
     }
-
-    private void FixedUpdate()
-    {
-
-
-    }
-
+    
     void NoQuestFound()
     {
         TextDetails.text = "Quest log is currently empty.";
