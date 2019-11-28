@@ -9,15 +9,15 @@ public class Slayer : Quest
     {
         QUIM = FindObjectOfType<QuestUIManager>();
 
-        QuestName = "Monster Masher";
-        Description = "Defeat the final boss";
+        QuestName = "Bandit Basher";
+        Description = "Clear out the bandit camp";
         NPCID = "wood";
         ExperenceReward = 100;
-        RequiredAmount = 1;
+        RequiredAmount = 4;
         CurrentAmount = 0;
         CoinReward = 100;
 
-        Goals.Add(new KillQuest(this, NPCID, "Kill " + RequiredAmount + " Beast", false, CurrentAmount, RequiredAmount, CoinReward));
+        Goals.Add(new KillQuest(this, NPCID, "Kill " + RequiredAmount + " Bandits", false, CurrentAmount, RequiredAmount, CoinReward));
 
 
         Goals.ForEach(g => g.Init());
@@ -29,7 +29,7 @@ public class Slayer : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Welcome Alison,";
-            QUIM.NPCBoxTwo.text = "we are having issues with a large beast, can you slay it for us?";
+            QUIM.NPCBoxTwo.text = "There is a group of bandits camped near us, can you deal with them?";
         }
         TrackingQuest();
     }
@@ -38,7 +38,7 @@ public class Slayer : Quest
     {
         if (QUIM)
         {
-            QUIM.TextDetails.text = "Slay the giant beast hanging around the circle of stones";
+            QUIM.TextDetails.text = "Clear out the bandit camp";
             QUIM.TextTally.text = this.CurrentAmount + " / " + RequiredAmount;
         }
     }
@@ -47,7 +47,7 @@ public class Slayer : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Hello Alison";
-            QUIM.NPCBoxTwo.text = "Have you had any luck hunting down the beast?";
+            QUIM.NPCBoxTwo.text = "Have you had any luck defeating those bandits?";
         }
     }
     public override void CompletedText()
