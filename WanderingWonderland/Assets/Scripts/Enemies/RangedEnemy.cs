@@ -14,17 +14,13 @@ public class RangedEnemy : BaseEnemy
 
     public override void Attack()
     {
+        enemyAnim.SetLayerWeight(1, 0);
+        enemyAnim.SetLayerWeight(2, 1);
+        enemyAnim.SetFloat("Attack", 0.6f);
+        enemyAnim.SetFloat("Move", 0f);
         if (weapon.GetComponent<RangedWeapon>())
         {
             weapon.GetComponent<RangedWeapon>().Attack();
-        }
-    }
-
-    public override void Movement()
-    {
-        if(enemyMovement)
-        {
-            enemyMovement.RoamingPath();
         }
     }
 }

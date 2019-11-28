@@ -20,13 +20,4 @@ public class MeleeEnemy : BaseEnemy
         }
     }
 
-
-    public override void Movement()
-    {
-        if (enemyMovement)
-        {
-            enemyMovement.RoamingPath();
-        }
-    }
-
 }

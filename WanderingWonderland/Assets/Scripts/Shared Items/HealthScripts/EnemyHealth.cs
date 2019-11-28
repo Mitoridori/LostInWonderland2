@@ -11,8 +11,7 @@ public class EnemyHealth : Health
 
     private void Update()
     {
-        transform.LookAt(Camera.main.transform);
-        healthBar.sizeDelta = new Vector2(GetCurrentHealth(), healthBar.sizeDelta.y);
+        healthBar.sizeDelta = new Vector2((GetCurrentHealth() * 2), healthBar.sizeDelta.y);
     }
 
 }

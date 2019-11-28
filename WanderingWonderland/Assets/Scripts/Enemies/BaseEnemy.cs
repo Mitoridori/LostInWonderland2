@@ -12,13 +12,16 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     public float attackSpeed = 3f;
     public GameObject weapon;
     public int attackRange;
+    public int maxHealthPoints = 5;
     protected EnemyRoaming enemyMovement;
 
     protected CharController player;
-    Health health;
+    protected Animator enemyAnim;
+    EnemyHealth health;
     float nextAttack;
     float turnSpeed = 1.0f;
     float singleStep;
+    int currentHealth;
 
 
     private enum EnemyStates
@@ -33,15 +36,20 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
 
     public abstract void Attack();
 
-    public abstract void Movement();
-
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<CharController>();
-        health = GetComponent<Health>();
+        health = GetComponent<EnemyHealth>();
         enemyMovement = GetComponent<EnemyRoaming>();
+        currentHealth = maxHealthPoints;
         nextAttack = Time.time;
+        enemyAnim = GetComponent<Animator>();
+
+        if(health)
+        {
+            health.SetMaxHealth(currentHealth);
+        }
 
     }
 
@@ -82,7 +90,26 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
         else if (state == EnemyStates.dead)
         {
             Done();
-            gameObject.SetActive(false);
+            enemyAnim.SetLayerWeight(4, 1);
+        }
+    }
+
+    void ResetAnims()
+    {
+        enemyAnim.SetLayerWeight(1, 1);
+        enemyAnim.SetLayerWeight(2, 0);
+        enemyAnim.SetLayerWeight(3, 0);
+        enemyAnim.SetLayerWeight(4, 0);
+    }
+
+    public void Movement()
+    {
+        if (enemyMovement)
+        {
+            enemyMovement.RoamingPath();
+            ResetAnims();
+            enemyAnim.SetFloat("Move", 0.6f);
+            enemyAnim.SetFloat("Attack", 0f);
         }
     }
 
