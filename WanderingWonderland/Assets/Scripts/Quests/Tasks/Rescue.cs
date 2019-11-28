@@ -2,34 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slayer : Quest
+public class Rescue : Quest
 {
 
     private void Awake()
     {
         QUIM = FindObjectOfType<QuestUIManager>();
 
-        QuestName = "Monster Masher";
-        Description = "Defeat the final boss";
+        QuestName = "Risky Rescue";
+        Description = "Rescue Buffy the Bandit Basher";
         NPCID = "wood";
         ExperenceReward = 100;
         RequiredAmount = 1;
         CurrentAmount = 0;
         CoinReward = 100;
 
-        Goals.Add(new KillQuest(this, NPCID, "Kill " + RequiredAmount + " Beast", false, CurrentAmount, RequiredAmount, CoinReward));
+        Goals.Add(new EscortQuest(this, NPCID, "Rescue Billy Bob from camp", false, CurrentAmount, RequiredAmount, CoinReward));
 
 
         Goals.ForEach(g => g.Init());
 
     }
-
     public override void StartText()
     {
         if (QUIM)
         {
-            QUIM.NPCBoxOne.text = "Welcome Alison,";
-            QUIM.NPCBoxTwo.text = "we are having issues with a large beast, can you slay it for us?";
+            QUIM.NPCBoxOne.text = "Hello again Alison,";
+            QUIM.NPCBoxTwo.text = "Billy Bob has gone off to attack bandits at a nearby camp and hasn't returned yet...";
         }
         TrackingQuest();
     }
@@ -38,7 +37,7 @@ public class Slayer : Quest
     {
         if (QUIM)
         {
-            QUIM.TextDetails.text = "Slay the giant beast hanging around the circle of stones";
+            QUIM.TextDetails.text = "Rescue Billy Bob from the camp!";
             QUIM.TextTally.text = this.CurrentAmount + " / " + RequiredAmount;
         }
     }
@@ -47,7 +46,7 @@ public class Slayer : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Hello Alison";
-            QUIM.NPCBoxTwo.text = "Have you had any luck hunting down the beast?";
+            QUIM.NPCBoxTwo.text = "Have you found Billy Bob yet?";
         }
     }
     public override void CompletedText()
@@ -55,7 +54,7 @@ public class Slayer : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Thank you for your help!";
-            QUIM.NPCBoxTwo.text = "You have saved our village.";
+            QUIM.NPCBoxTwo.text = "Buffy the Bandit Basher is home safe and sound.";
             QUIM.TextDetails.text = "No Current Quest";
             QUIM.TextTally.text = "  ";
         }

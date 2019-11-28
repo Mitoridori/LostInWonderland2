@@ -9,7 +9,7 @@ public class WinterIsComing : Quest
     {
         QUIM = FindObjectOfType<QuestUIManager>();
 
-        QuestName = "Winter is Coming";
+        QuestName = "Winter Wooderland";
         Description = "Collect wood";
         ExperenceReward = 100;
         RequiredAmount = 1;
@@ -28,7 +28,7 @@ public class WinterIsComing : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Welcome Alison,";
-            QUIM.NPCBoxTwo.text = "Winter is Coming, the town needs fire wood to brave the coming cold, collect " + RequiredAmount + " of logs from nearby woods";
+            QUIM.NPCBoxTwo.text = "Winter is Coming, the town needs fire wood to brave the coming cold, collect " + RequiredAmount + " of logs from the nearby woods";
         }
         TrackingQuest();
     }
