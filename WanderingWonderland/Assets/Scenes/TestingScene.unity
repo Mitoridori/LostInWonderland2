@@ -1589,7 +1589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
       propertyPath: QuestNames.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
       propertyPath: NPCTextBox
@@ -1605,11 +1605,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
       propertyPath: QuestNames.Array.data[0]
-      value: Slayer
+      value: WinterIsComing
       objectReference: {fileID: 0}
     - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
       propertyPath: QuestNames.Array.data[1]
-      value: WinterIsComing
+      value: Rescue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
+      propertyPath: QuestNames.Array.data[2]
+      value: Slayer
       objectReference: {fileID: 0}
     - target: {fileID: 1616097700350253206, guid: 76eacd0021a94974caed86ef69fbdbe1,
         type: 3}
