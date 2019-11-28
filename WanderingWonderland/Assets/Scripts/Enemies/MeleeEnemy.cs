@@ -14,6 +14,10 @@ public class MeleeEnemy : BaseEnemy
 
     public override void Attack()
     {
+        enemyAnim.SetLayerWeight(1, 0);
+        enemyAnim.SetLayerWeight(3, 1);
+        enemyAnim.SetFloat("MeleeAttack", 0.6f);
+        enemyAnim.SetFloat("Move", 0f);
         if ((player.transform.position - transform.position).magnitude <= attackRange)
         {
             enemyMovement.GetNavMeshAgent().SetDestination(player.transform.position);
