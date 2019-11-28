@@ -10,7 +10,7 @@ public abstract class BaseEnemy : MonoBehaviour
     public int attackRange;
     protected EnemyRoaming enemyMovement;
 
-    CharController player;
+    protected CharController player;
     Health health;
     float nextAttack;
     float turnSpeed = 1.0f;

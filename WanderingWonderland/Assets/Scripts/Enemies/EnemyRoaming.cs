@@ -70,6 +70,10 @@ public class EnemyRoaming : MonoBehaviour
         }
     }
 
+    public NavMeshAgent GetNavMeshAgent()
+    {
+        return agent;
+    }
 
     public Transform GetCurrentWaypoint()
     {
