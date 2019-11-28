@@ -11,6 +11,8 @@ public class QuestUIManager : MonoBehaviour
     public TextMeshProUGUI TextTally;
     public TextMeshProUGUI NPCBoxOne;
     public TextMeshProUGUI NPCBoxTwo;
+    public GameObject ToggleButton;
+    bool toggle = true;
 
     QuestGiver QG;
 
@@ -37,4 +39,19 @@ public class QuestUIManager : MonoBehaviour
         NPCBoxOne.text = "Welcome Alison";
         NPCBoxTwo.text = "Thank you for your help.";
     }
+
+    public void PlayerLogOpen()
+    {
+        if (!toggle)
+        {
+            ToggleButton.SetActive(true);
+            toggle = true;
+        }
+        else if (toggle)
+        {
+            ToggleButton.SetActive(false);
+            toggle = false;
+        }
+    }
+
 }
