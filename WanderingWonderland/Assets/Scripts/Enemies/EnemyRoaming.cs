@@ -9,6 +9,8 @@ public class EnemyRoaming : MonoBehaviour
 
     public Transform WaypointContainer;
     public Transform[] waypoints;
+    public BaseEnemy[] enemy;
+    private Transform[] waypoint;
     private int currentWaypoint = 0;
     public float distanceToCover = 1f;
 
@@ -20,23 +22,40 @@ public class EnemyRoaming : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         GetWaypoints();
-        distanceLeftToTravel = new float[waypoints.Length];
+        waypoint = new Transform[enemy.Length];
+        distanceLeftToTravel = new float[enemy.Length];
+
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            distanceLeftToTravel[i] = float.MaxValue;
+        }
     }
 
     public void RoamingPath()
     {
-        for (int i = 0; i < waypoints.Length; i++)
+        Vector3 RelativeWaypointPosition = transform.InverseTransformPoint(new Vector3(waypoints[currentWaypoint].position.x, transform.position.y, waypoints[currentWaypoint].position.z));
+
+        for (int i = 0; i < enemy.Length; i++)
         {
             Transform nextWaypoint = GetCurrentWaypoint();
             float distanceCovered = (nextWaypoint.position - transform.position).magnitude;
 
             if (distanceLeftToTravel[i] - distanceToCover > distanceCovered ||
-                waypoints[i] != nextWaypoint)
+                waypoint[i] != nextWaypoint)
             {
-                waypoints[i] = nextWaypoint;
+                waypoint[i] = nextWaypoint;
                 distanceLeftToTravel[i] = distanceCovered;
             }
-            agent.SetDestination(nextWaypoint.position);
+
+            if (RelativeWaypointPosition.magnitude < 5)
+            {
+                currentWaypoint++;
+                if(currentWaypoint >= waypoints.Length)
+                {
+                    currentWaypoint = 0;
+                }
+            }
+            agent.SetDestination(GetCurrentWaypoint().position);
         }
     }
 
