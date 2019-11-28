@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseEnemy : MonoBehaviour
+public abstract class BaseEnemy : MonoBehaviour, IQuestID
 {
+
+    public string ID {get; set;}
+    public int Experience { get; set; }
+    public int Coins { get; set; }
 
     public float attackSpeed = 3f;
     public GameObject weapon;
@@ -38,6 +42,7 @@ public abstract class BaseEnemy : MonoBehaviour
         health = GetComponent<Health>();
         enemyMovement = GetComponent<EnemyRoaming>();
         nextAttack = Time.time;
+
     }
 
     // Update is called once per frame
@@ -48,6 +53,7 @@ public abstract class BaseEnemy : MonoBehaviour
 
     void UpdateEnemy()
     {
+        CheckCurrentHealth();
         if (state != EnemyStates.dead)
         {
             switch (state)
@@ -73,6 +79,11 @@ public abstract class BaseEnemy : MonoBehaviour
                 RotateEnemy();
             }
         }
+        else if (state == EnemyStates.dead)
+        {
+            Done();
+            gameObject.SetActive(false);
+        }
     }
 
     void CheckIfActive()
@@ -92,6 +103,14 @@ public abstract class BaseEnemy : MonoBehaviour
                 nextAttack = (Time.time + attackSpeed);
                 Attack();
             }
+        }
+    }
+
+    void CheckCurrentHealth()
+    {
+        if(health.GetCurrentHealth() <= 0)
+        {
+            state = EnemyStates.dead;
         }
     }
 
@@ -121,5 +140,10 @@ public abstract class BaseEnemy : MonoBehaviour
                 CheckIfCanAttack();
             }
         }
+    }
+
+    public void Done()
+    {
+        QuestEvents.EnemyDied(this);
     }
 }
