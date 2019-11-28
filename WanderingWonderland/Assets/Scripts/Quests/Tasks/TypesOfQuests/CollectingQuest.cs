@@ -2,30 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillQuest : QuestGoal
+public class CollectingQuest : QuestGoal
 {
-    public string EnemyID { get; set; }
+    public string ItemID { get; set; }
 
-    public KillQuest(Quest quest, string enemyID, string description, bool completed, int currentAmount, int requiredAmount)
+    public CollectingQuest(Quest quest, string itemID, string description, bool completed, int currentAmount, int requiredAmount, int coins)
     {
         this.Quest = quest;
-        this.EnemyID = enemyID;
+        this.ItemID = itemID;
         this.Description = description;
         this.Completed = completed;
         this.CurrentAmount = currentAmount;
         this.RequiredAmount = requiredAmount;
+        this.CoinReward = coins;
 
     }
 
     public override void Init()
     {
         base.Init();
-        QuestEvents.OnEnemyDeath += EnemyDied;
+        QuestEvents.EndEvent += ItemCollected;
     }
 
-    void EnemyDied(IQuestID enemy)
+    void ItemCollected(IQuestID items)
     {
-        if (enemy.ID == this.EnemyID)
+        if (items.ID == this.ItemID)
         {
             this.CurrentAmount++;
             Evaluate();

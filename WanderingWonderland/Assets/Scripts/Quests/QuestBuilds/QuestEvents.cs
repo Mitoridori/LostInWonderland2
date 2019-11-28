@@ -5,11 +5,11 @@ using UnityEngine;
 public class QuestEvents : MonoBehaviour
 {
     public delegate void EnemyEventHandler(IQuestID enemy);
-    public static event EnemyEventHandler OnEnemyDeath;
+    public static event EnemyEventHandler EndEvent;
 
     public static void EnemyDied(IQuestID enemy)
     {
-        if (OnEnemyDeath != null)
-            OnEnemyDeath(enemy);
+        if (EndEvent != null)
+            EndEvent(enemy);
     }
 }

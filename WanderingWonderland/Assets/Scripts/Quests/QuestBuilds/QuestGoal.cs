@@ -9,6 +9,7 @@ public class QuestGoal
     public bool Completed { get; set; }
     public int CurrentAmount { get; set; }
     public int RequiredAmount { get; set; }
+    public int CoinReward { get; set; }
 
     public virtual void Init()
     {

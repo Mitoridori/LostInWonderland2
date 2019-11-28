@@ -6,6 +6,8 @@ public abstract class Quest : MonoBehaviour
 {
     public QuestUIManager QUIM;
 
+    public Alison alison;
+
     public List<QuestGoal> Goals = new List<QuestGoal>();
     public string QuestName { get; set; }
     public string Description { get; set; }
@@ -13,6 +15,7 @@ public abstract class Quest : MonoBehaviour
     public bool Completed { get; set; }
     public int RequiredAmount { get; set; }
     public int CurrentAmount { get; set; }
+    public int CoinReward { get; set; }
 
 
     public abstract void StartText();
@@ -20,9 +23,11 @@ public abstract class Quest : MonoBehaviour
     public abstract void InprogressText();
     public abstract void CompletedText();
 
+
     void Start()
     {
         QUIM = FindObjectOfType<QuestUIManager>();
+        alison = FindObjectOfType<Alison>();
 
     }
     public void CheckGoals()
@@ -36,8 +41,8 @@ public abstract class Quest : MonoBehaviour
 
     public void GiveReward()
     {
-        //if (ItemReward != null)
-        //    InventoryController.Instance.GiveItem(ItemReward);
+        if (alison)
+            alison.SetCoin(CoinReward);
     }
 
     

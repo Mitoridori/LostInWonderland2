@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slayer : Quest
+public class WinterIsComing : Quest
 {
-
+    // Start is called before the first frame update
     private void Awake()
     {
         QUIM = FindObjectOfType<QuestUIManager>();
 
-        QuestName = "Ultimate Slayer";
-        Description = "Kill a bunch of stuff";
+        QuestName = "Winter is Coming";
+        Description = "Collect wood";
         ExperenceReward = 100;
         RequiredAmount = 1;
         CurrentAmount = 0;
         CoinReward = 100;
 
-        Goals.Add(new KillQuest(this, "wood", "Kill " + RequiredAmount + " Beast", false, CurrentAmount, RequiredAmount, CoinReward));
+        Goals.Add(new CollectingQuest(this, "wood", "Gather up " + RequiredAmount + " wood", false, CurrentAmount, RequiredAmount, CoinReward));
 
 
         Goals.ForEach(g => g.Init());
@@ -28,7 +28,7 @@ public class Slayer : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Welcome Alison,";
-            QUIM.NPCBoxTwo.text = "we are having issues with a large beast, can you slay it for us?";
+            QUIM.NPCBoxTwo.text = "Winter is Coming, the town needs fire wood to brave the coming cold, collect " + RequiredAmount + " of logs from nearby woods";
         }
         TrackingQuest();
     }
@@ -37,8 +37,8 @@ public class Slayer : Quest
     {
         if (QUIM)
         {
-            QUIM.TextDetails.text = "Slay " + RequiredAmount + " Beast";
-            QUIM.TextTally.text = this.CurrentAmount + " / " + RequiredAmount;
+            QUIM.TextDetails.text = "Collect " + RequiredAmount + " wood";
+            QUIM.TextTally.text = CurrentAmount + " / " + RequiredAmount;
         }
     }
     public override void InprogressText()
@@ -46,7 +46,7 @@ public class Slayer : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Hello Alison";
-            QUIM.NPCBoxTwo.text = "Have you had any luck hunting down the beast?";
+            QUIM.NPCBoxTwo.text = "Have you had any luck getting the wood?";
         }
     }
     public override void CompletedText()
@@ -54,7 +54,7 @@ public class Slayer : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Thank you for your help!";
-            QUIM.NPCBoxTwo.text = "We shall never be bothered by them again.";
+            QUIM.NPCBoxTwo.text = "We shall not need any more wood.";
             QUIM.TextDetails.text = "No Current Quest";
             QUIM.TextTally.text = "  ";
         }

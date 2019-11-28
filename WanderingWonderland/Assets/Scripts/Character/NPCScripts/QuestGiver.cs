@@ -10,8 +10,9 @@ public class QuestGiver : NPCController
 
     [SerializeField]
     private GameObject quests;
-    [SerializeField]
-    private string questType;
+
+    public string[] QuestNames;
+    int i = 0;
 
     public Quest Quest { get; set; }
 
@@ -39,12 +40,7 @@ public class QuestGiver : NPCController
         }
         else
         {
-            if (QUIM)
-            {
-                QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
-                QUIM.NPCBoxTwo.text = "Thanks for all your help again.";
-            }
-
+            NextQuest();
         }
 
     }
@@ -52,7 +48,7 @@ public class QuestGiver : NPCController
     void AssignQuest()
     {
         AssignedQuest = true;
-        Quest = (Quest)quests.AddComponent(System.Type.GetType(questType));
+        Quest = (Quest)quests.AddComponent(System.Type.GetType(QuestNames[i]));
         Quest.StartText();
     }
 
@@ -69,6 +65,31 @@ public class QuestGiver : NPCController
         else
         {
             Quest.InprogressText();
+        }
+    }
+
+    void NextQuest()
+    {
+        i++;
+        if (i >= QuestNames.Length)
+        {
+            NoMoreQuest();
+        }
+        else
+        {
+            Helped = false;
+            AssignedQuest = false;
+            AssignQuest();
+
+        }
+    }
+
+    void NoMoreQuest()
+    {
+        if (QUIM)
+        {
+            QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
+            QUIM.NPCBoxTwo.text = "Thanks for all your help again.";
         }
     }
 }
