@@ -91,6 +91,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
         {
             Done();
             enemyAnim.SetLayerWeight(4, 1);
+            Invoke("DespawnEnemyCorpse", enemyAnim.speed);
         }
     }
 
@@ -111,6 +112,11 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
             enemyAnim.SetFloat("Move", 0.6f);
             enemyAnim.SetFloat("Attack", 0f);
         }
+    }
+
+    void DespawnEnemyCorpse()
+    {
+        gameObject.SetActive(false);
     }
 
     void CheckIfActive()
