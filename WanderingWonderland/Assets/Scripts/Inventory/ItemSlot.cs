@@ -1,35 +1,50 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System;
 
 
-public class ItemSlot : MonoBehaviour
+public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
 
-    [SerializeField] Image Image;
+    [SerializeField] Image image;
+
+    public event Action<Item> OnRightClickEvent;
+
     private Item _item;
-    public Item item
+    public Item Item
     {
         get { return _item; }
         set
         {
             _item = value;
-            if (item = null)
+            if (_item == null)
             {
-                Image.enabled = false;
+                image.enabled = false;
             }
             else
             {
-                Image.sprite = _item.Icon;
-                Image.enabled = true;
+                image.sprite = _item.Icon;
+                image.enabled = true;
+            }
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData != null && eventData.button == PointerEventData.InputButton.Right)
+        {
+            if(Item != null && OnRightClickEvent != null)
+            {
+                OnRightClickEvent(Item);
             }
         }
     }
 
     private void OnValidate()
     {
-        if (Image == null)
-          Image = GetComponent<Image>();
+        if (image == null)
+          image = GetComponent<Image>();
         
     }
 }
