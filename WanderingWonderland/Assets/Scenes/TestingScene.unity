@@ -3559,6 +3559,22 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 1021492037, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.6886792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021492037, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.48831254
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021492037, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.21115166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021492037, guid: cb5e639f8ef850a4d9429f6098a12ee1, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281695407
+      objectReference: {fileID: 0}
     - target: {fileID: 5726727524343363506, guid: cb5e639f8ef850a4d9429f6098a12ee1,
         type: 3}
       propertyPath: m_fontColor.r
