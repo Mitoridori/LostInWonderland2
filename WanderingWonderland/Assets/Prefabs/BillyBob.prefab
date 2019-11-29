@@ -1468,8 +1468,7 @@ GameObject:
   - component: {fileID: 7419267422452458016}
   - component: {fileID: 7419267422243405973}
   - component: {fileID: 7419267422243405972}
-  - component: {fileID: 760286480}
-  - component: {fileID: 760286482}
+  - component: {fileID: 6586159575730665310}
   m_Layer: 0
   m_Name: BillyBob
   m_TagString: Untagged
@@ -1529,7 +1528,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &7419267422243405972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,37 +1543,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCTextBox: {fileID: 0}
   Alison: {fileID: 0}
-  speed: 5
-  rb: {fileID: 760286480}
---- !u!54 &760286480
-Rigidbody:
+  followRange: 5
+--- !u!195 &6586159575730665310
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7419267422445195746}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &760286482
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7419267422445195746}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 16.867943, y: 2.6870432, z: 17.506042}
-  m_Center: {x: -2.8899193, y: 0.8435216, z: 0.9822998}
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7419267422445195748
 GameObject:
   m_ObjectHideFlags: 0
