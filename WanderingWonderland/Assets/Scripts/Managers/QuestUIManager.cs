@@ -11,7 +11,8 @@ public class QuestUIManager : MonoBehaviour
     public TextMeshProUGUI TextTally;
     public TextMeshProUGUI NPCBoxOne;
     public TextMeshProUGUI NPCBoxTwo;
-    public GameObject ToggleButton;
+    public GameObject ToggleButtonA;
+    public GameObject ToggleButtonB;
     bool toggle = true;
 
     QuestGiver QG;
@@ -44,12 +45,14 @@ public class QuestUIManager : MonoBehaviour
     {
         if (!toggle)
         {
-            ToggleButton.SetActive(true);
+            ToggleButtonA.SetActive(true);
+            ToggleButtonB.SetActive(true);
             toggle = true;
         }
         else if (toggle)
         {
-            ToggleButton.SetActive(false);
+            ToggleButtonA.SetActive(false);
+            ToggleButtonB.SetActive(false);
             toggle = false;
         }
     }
