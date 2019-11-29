@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class Rescue : Quest
 {
-
+    EscortChar BillyBob;
     private void Awake()
     {
         QUIM = FindObjectOfType<QuestUIManager>();
 
-        QuestName = "Risky Rescue";
-        Description = "Rescue Buffy the Bandit Basher";
-        NPCID = "wood";
+        QuestName = "Find Billy";
+        Description = "Escort Billy Bob back home";
+        NPCID = "BillyBob";
         ExperenceReward = 100;
         RequiredAmount = 1;
         CurrentAmount = 0;
         CoinReward = 100;
 
-        Goals.Add(new EscortQuest(this, NPCID, "Rescue Billy Bob from camp", false, CurrentAmount, RequiredAmount, CoinReward));
+        Goals.Add(new EscortQuest(this, NPCID, "Escort Billy back to the village", false, CurrentAmount, RequiredAmount, CoinReward));
 
 
         Goals.ForEach(g => g.Init());
+
+        BillyBob = FindObjectOfType<EscortChar>();
+        if (BillyBob)
+            BillyBob.Finished = false;
 
     }
     public override void StartText()
@@ -28,7 +32,7 @@ public class Rescue : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Hello again Alison,";
-            QUIM.NPCBoxTwo.text = "Billy Bob has gone off to attack bandits at a nearby camp and hasn't returned yet...";
+            QUIM.NPCBoxTwo.text = "Billy Bob wondered off and hasn't come home yet, can you find him?...";
         }
         TrackingQuest();
     }
@@ -37,7 +41,7 @@ public class Rescue : Quest
     {
         if (QUIM)
         {
-            QUIM.TextDetails.text = "Rescue Billy Bob from the camp!";
+            QUIM.TextDetails.text = "Find Billy and bring him home!";
             QUIM.TextTally.text = this.CurrentAmount + " / " + RequiredAmount;
         }
     }
@@ -46,7 +50,7 @@ public class Rescue : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Hello Alison";
-            QUIM.NPCBoxTwo.text = "Have you found Billy Bob yet?";
+            QUIM.NPCBoxTwo.text = "Have you found Billy Bob yet? He was always fascinated by that circle of stones north east of here";
         }
     }
     public override void CompletedText()
@@ -54,7 +58,7 @@ public class Rescue : Quest
         if (QUIM)
         {
             QUIM.NPCBoxOne.text = "Thank you for your help!";
-            QUIM.NPCBoxTwo.text = "Buffy the Bandit Basher is home safe and sound.";
+            QUIM.NPCBoxTwo.text = "Billy is home safe and sound.";
             QUIM.TextDetails.text = "No Current Quest";
             QUIM.TextTally.text = "  ";
         }

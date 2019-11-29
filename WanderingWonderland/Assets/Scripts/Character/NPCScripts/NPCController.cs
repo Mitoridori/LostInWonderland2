@@ -7,6 +7,8 @@ public abstract class NPCController : MonoBehaviour
 
     public GameObject NPCTextBox;
     bool NPCClick = false;
+
+    public Transform Alison;
     
 
     public abstract void Interact();
@@ -21,6 +23,7 @@ public abstract class NPCController : MonoBehaviour
     void Update()
     {
         InteractMouse();
+        LookAt();
     }
 
     //Interactions with NPC
@@ -63,5 +66,10 @@ public abstract class NPCController : MonoBehaviour
 
         }
 
+    }
+
+    public void LookAt()
+    {
+        transform.LookAt(Alison);
     }
 }

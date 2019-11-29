@@ -18,6 +18,19 @@ public class EscortQuest : QuestGoal
         this.CoinReward = coins;
     }
 
+    public override void Init()
+    {
+        base.Init();
+        QuestEvents.EndEvent += ItemCollected;
+    }
 
-    
+    void ItemCollected(IQuestID items)
+    {
+        if (items.ID == this.EnemyID)
+        {
+            this.CurrentAmount++;
+            Evaluate();
+        }
+    }
+
 }
