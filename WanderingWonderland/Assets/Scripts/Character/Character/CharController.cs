@@ -118,11 +118,6 @@ public class CharController : MonoBehaviour
             {
                 animController.SetLayerWeight(1, 0);
                 animController.SetFloat("Attack", 0.2f);
-                if (animController)
-                {
-                    animController.SetFloat("Attack", 0f);
-                    ResetAnims();
-                }
             }
 
             if (Input.GetMouseButton(1))
