@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Alison : MonoBehaviour
 {
@@ -39,6 +40,14 @@ public class Alison : MonoBehaviour
         if (healthBar)
             healthBar.SetMaxHealth(currentHealth);
 
+    }
+
+    private void Update()
+    {
+        if(currentHealth == 0)
+        {
+            SceneManager.LoadScene("DeathScreen");
+        }
     }
 
     public void DamageInc(int amount)

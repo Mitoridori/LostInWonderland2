@@ -26,9 +26,14 @@ public class LevelLoadingManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void LoadWinScreen()
+    public void LoadDeathScreen()
     {
+        SceneManager.LoadScene("DeathScreen");
+    }
 
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }
