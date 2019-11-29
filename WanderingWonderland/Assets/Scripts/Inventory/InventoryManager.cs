@@ -8,10 +8,10 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        inventory.OnItemRightClickedEvent += EquipFromInventory;
+        inventory.OnItemRightClickedEvent += useItem;
     }
 
-    private void EquipFromInventory(Item item)
+    private void useItem (Item item)
     {
         //code if using equipable items
     }
