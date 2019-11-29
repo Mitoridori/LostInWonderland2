@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Rescue : Quest
 {
-
+    EscortChar BillyBob;
     private void Awake()
     {
         QUIM = FindObjectOfType<QuestUIManager>();
 
         QuestName = "Find Billy";
         Description = "Escort Billy Bob back home";
-        NPCID = "wood";
+        NPCID = "BillyBob";
         ExperenceReward = 100;
         RequiredAmount = 1;
         CurrentAmount = 0;
@@ -21,6 +21,10 @@ public class Rescue : Quest
 
 
         Goals.ForEach(g => g.Init());
+
+        BillyBob = FindObjectOfType<EscortChar>();
+        if (BillyBob)
+            BillyBob.Finished = false;
 
     }
     public override void StartText()

@@ -1469,6 +1469,7 @@ GameObject:
   - component: {fileID: 7419267422243405973}
   - component: {fileID: 7419267422243405972}
   - component: {fileID: 6586159575730665310}
+  - component: {fileID: 901916463}
   m_Layer: 0
   m_Name: BillyBob
   m_TagString: Untagged
@@ -1520,7 +1521,7 @@ CharacterController:
   m_GameObject: {fileID: 7419267422445195746}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -1544,6 +1545,7 @@ MonoBehaviour:
   NPCTextBox: {fileID: 0}
   Alison: {fileID: 0}
   followRange: 5
+  Finished: 0
 --- !u!195 &6586159575730665310
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1566,6 +1568,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &901916463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419267422445195746}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7473907, y: 1.5302414, z: 1.6305847}
+  m_Center: {x: 0.010673523, y: 0.2651207, z: -0.09840393}
 --- !u!1 &7419267422445195748
 GameObject:
   m_ObjectHideFlags: 0

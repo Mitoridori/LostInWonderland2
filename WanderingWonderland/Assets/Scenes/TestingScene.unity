@@ -207,7 +207,7 @@ PrefabInstance:
     - target: {fileID: 7419267422445555138, guid: 1e2388498ba189948bad49c2bf681832,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.30681
+      value: 205.9
       objectReference: {fileID: 0}
     - target: {fileID: 7419267422445555138, guid: 1e2388498ba189948bad49c2bf681832,
         type: 3}
@@ -217,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 7419267422445555138, guid: 1e2388498ba189948bad49c2bf681832,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 395.8518
+      value: 252.2
       objectReference: {fileID: 0}
     - target: {fileID: 7419267422445555138, guid: 1e2388498ba189948bad49c2bf681832,
         type: 3}
@@ -1048,6 +1048,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &901916462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7419267422445195746, guid: 1e2388498ba189948bad49c2bf681832,
+    type: 3}
+  m_PrefabInstance: {fileID: 216147355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &901916463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901916462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7473907, y: 1.5302414, z: 1.6305847}
+  m_Center: {x: 0.010673523, y: 0.2651207, z: -0.09840393}
 --- !u!1001 &908205354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1255,6 +1274,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5f24c527fb03c4eb09ccba04c44183, type: 3}
+--- !u!1 &1230585812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230585814}
+  - component: {fileID: 1230585813}
+  m_Layer: 0
+  m_Name: FinishedSpot
+  m_TagString: Home
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1230585813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230585812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.78186, y: 1.8070483, z: 11.846573}
+  m_Center: {x: -0.48754883, y: 0.40352416, z: 0.6987381}
+--- !u!4 &1230585814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230585812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 266.54193, y: -1.13, z: 197.4313}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231766837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,11 +1741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
       propertyPath: QuestNames.Array.data[0]
-      value: WinterIsComing
+      value: Rescue
       objectReference: {fileID: 0}
     - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
       propertyPath: QuestNames.Array.data[1]
-      value: Rescue
+      value: WinterIsComing
       objectReference: {fileID: 0}
     - target: {fileID: 1589245351, guid: 76eacd0021a94974caed86ef69fbdbe1, type: 3}
       propertyPath: QuestNames.Array.data[2]
@@ -2041,7 +2104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.6
+      value: 259.3
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2049,7 +2112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 420.1
+      value: 203.3
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 9abbaa4495ba9dc49a1ae23d1ca35779, type: 3}
       propertyPath: m_LocalRotation.x

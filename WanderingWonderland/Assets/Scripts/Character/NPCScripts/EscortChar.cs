@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EscortChar : NPCController
+public class EscortChar : NPCController, IQuestID
 {
 
     private NavMeshAgent agent;
     public int followRange = 5;
-   
+    public bool Finished = true;
+    public string ID { get; set; }
+    public int Experience { get; set; }
+    public int Coins { get; set; }
 
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        ID = "BillyBob";
     }
     private void FixedUpdate()
     {
+        if(!Finished)
         FollowPlayer();
+
     }
 
     void FollowPlayer()
@@ -29,12 +34,26 @@ public class EscortChar : NPCController
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Home")
+        {
+            Done();
+            Finished = true;
+        }
+    }
+
+
 
     public override void Interact()
     {
 
     }
 
-
+    public void Done()
+    {
+        QuestEvents.EnemyDied(this);
+    }
 
 }
