@@ -12,8 +12,7 @@ public class MeleeWeapon : BaseWeapon
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<Health>() && ((other.gameObject.transform.root.tag != "Player" && other.gameObject.tag == "Enemy" && gameObject.tag == "PlayerWeapon") 
-            || (other.gameObject.transform.root.tag != "Enemy" && other.gameObject.tag == "Player" && gameObject.tag == "EnemyWeapon")))
+        if(other.gameObject.GetComponent<Health>() && other.gameObject.transform.root.tag != gameObject.transform.root.tag)
         {
             other.GetComponent<Health>().TakeDamage(damageValue);
         }
