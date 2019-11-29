@@ -35,6 +35,7 @@ public abstract class BaseCollectible : MonoBehaviour
         {
             PickUp();
             gameObject.SetActive(false);
+            
 
         }
 
