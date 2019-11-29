@@ -114,10 +114,12 @@ public class CharController : MonoBehaviour
                 moveDirection = transform.TransformDirection(moveDirection);
             }
 
-            if (Input.GetButton("attack"))
+            if (Input.GetButton("Attack"))
             {
-                animController.SetLayerWeight(1, 0);
-                animController.SetFloat("Attack", 0.2f);
+                animController.SetBool("Attack", true);
+            } else
+            {
+                animController.SetBool("Attack", false);
             }
 
             if (Input.GetMouseButton(1))
@@ -139,12 +141,5 @@ public class CharController : MonoBehaviour
                 moveStatus = "jump";
         }
 
-    }
-
-    void ResetAnims()
-    {
-        animController.SetLayerWeight(0, 1);
-        animController.SetLayerWeight(1, 0);
-        animController.SetLayerWeight(2, 0);
     }
 }

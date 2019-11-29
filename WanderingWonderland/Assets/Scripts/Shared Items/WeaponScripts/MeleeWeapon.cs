@@ -16,7 +16,6 @@ public class MeleeWeapon : BaseWeapon
             || (other.gameObject.transform.root.tag != "Enemy" && other.gameObject.tag == "Player" && gameObject.tag == "EnemyWeapon")))
         {
             other.GetComponent<Health>().TakeDamage(damageValue);
-            print(other.gameObject.GetComponent<Health>().GetCurrentHealth());
         }
     }
 
