@@ -30,8 +30,8 @@ public class Bullet : MonoBehaviour
         if(other.gameObject.GetComponent<Health>() && other.gameObject.transform.root.tag != gameObject.transform.root.tag)
         {
             other.GetComponent<Health>().TakeDamage(damageValue);
+            CollidedWithObject();
         }
-        CollidedWithObject();
     }
 
 }
