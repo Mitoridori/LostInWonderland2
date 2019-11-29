@@ -12,7 +12,7 @@ public class WinterIsComing : Quest
         QuestName = "Winter Wooderland";
         Description = "Collect wood";
         ExperenceReward = 100;
-        RequiredAmount = 1;
+        RequiredAmount = 6;
         CurrentAmount = 0;
         CoinReward = 100;
 
