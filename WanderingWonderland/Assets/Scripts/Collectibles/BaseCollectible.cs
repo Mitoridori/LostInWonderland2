@@ -21,6 +21,7 @@ public abstract class BaseCollectible : MonoBehaviour
         {
             ApplyEffect();
             gameObject.SetActive(false);
+            
 
         }
 

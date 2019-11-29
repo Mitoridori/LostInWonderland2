@@ -56,6 +56,7 @@ public class Store : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             playerCharacter = other.gameObject.GetComponent<Alison>();
+            print("hit");
             
         }
         
