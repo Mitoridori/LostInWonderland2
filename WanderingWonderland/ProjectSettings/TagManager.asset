@@ -11,6 +11,8 @@ TagManager:
   - Collectable
   - Home
   - Enemy
+  - PlayerWeapon
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
