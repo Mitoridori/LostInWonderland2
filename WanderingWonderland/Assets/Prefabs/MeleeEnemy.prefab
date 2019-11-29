@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 5840653945409087662}
   m_Layer: 0
   m_Name: MeleeEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2440,14 +2440,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3044521168790468629}
     m_Modifications:
-    - target: {fileID: 114154328868401954, guid: 259746fbc59909b4eb14377c46a80363,
-        type: 3}
-      propertyPath: damageValue
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1037715513984232, guid: 259746fbc59909b4eb14377c46a80363, type: 3}
       propertyPath: m_Name
       value: Sword_OH
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037715513984232, guid: 259746fbc59909b4eb14377c46a80363, type: 3}
+      propertyPath: m_TagString
+      value: EnemyWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 4145553361310044, guid: 259746fbc59909b4eb14377c46a80363, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2492,6 +2491,11 @@ PrefabInstance:
     - target: {fileID: 4145553361310044, guid: 259746fbc59909b4eb14377c46a80363, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154328868401954, guid: 259746fbc59909b4eb14377c46a80363,
+        type: 3}
+      propertyPath: damageValue
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259746fbc59909b4eb14377c46a80363, type: 3}

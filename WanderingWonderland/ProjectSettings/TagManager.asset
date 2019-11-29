@@ -10,6 +10,7 @@ TagManager:
   - NPCTalk
   - Collectable
   - Home
+  - Enemy
   layers:
   - Default
   - TransparentFX

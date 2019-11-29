@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 7616760274940475742}
   m_Layer: 0
   m_Name: RangedEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2475,6 +2475,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden Bow
       objectReference: {fileID: 0}
+    - target: {fileID: 114902099050628752, guid: d03c4353fda446d4f8df56d422578d64,
+        type: 3}
+      propertyPath: damageValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114902099050628752, guid: d03c4353fda446d4f8df56d422578d64,
+        type: 3}
+      propertyPath: firingPoint
+      value: 
+      objectReference: {fileID: 2816932754516849679}
     - target: {fileID: 4620178347958848, guid: d03c4353fda446d4f8df56d422578d64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.146
@@ -2519,16 +2529,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 114902099050628752, guid: d03c4353fda446d4f8df56d422578d64,
-        type: 3}
-      propertyPath: damageValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114902099050628752, guid: d03c4353fda446d4f8df56d422578d64,
-        type: 3}
-      propertyPath: firingPoint
-      value: 
-      objectReference: {fileID: 2816932754516849679}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d03c4353fda446d4f8df56d422578d64, type: 3}
 --- !u!4 &6024773764087893352 stripped
