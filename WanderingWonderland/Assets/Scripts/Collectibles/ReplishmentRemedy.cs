@@ -7,6 +7,7 @@ public class ReplishmentRemedy : BaseCollectible
     public override void ApplyEffect()
     {
         health.Heal(amount);
+        Debug.Log("You gained health!");
     }
 
 }

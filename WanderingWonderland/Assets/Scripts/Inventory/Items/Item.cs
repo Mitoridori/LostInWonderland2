@@ -10,21 +10,23 @@ public class Item : ScriptableObject
     public Sprite icon = null;              // Item icon
     public bool showInInventory = true;
     Inventory inventory;
+    public Alison alison;
     // Called when the item is pressed in the inventory
-    public void Awake()
+    public void Start()
     {
-        inventory = FindObjectOfType<Inventory>();
+        //inventory = FindObjectOfType<Inventory>();
     }
 
     public virtual void Use()
     {
         // Use the item
-        // Something may happen
+
     }
 
     // Call this method to remove the item from inventory
     public void RemoveFromInventory()
     {
+        Inventory inventory = FindObjectOfType<Inventory>();
         inventory.Remove(this);
     }
 

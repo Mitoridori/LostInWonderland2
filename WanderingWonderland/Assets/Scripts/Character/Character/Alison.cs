@@ -10,7 +10,7 @@ public class Alison : MonoBehaviour
     public int PlayerStartCoins = 100;
     
     public CharController CC;
-    private CharacterHealth healthBar;
+    public CharacterHealth healthBar;
     private int currentHealth;
     private int currentDamage;
     private float BaseRunSpeed;
