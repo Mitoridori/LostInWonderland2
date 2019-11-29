@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class BaseCollectible : MonoBehaviour
 {
-    public Health health;
     public Alison alison;
     public Inventory inventory;
     public Item item;
@@ -16,6 +15,7 @@ public abstract class BaseCollectible : MonoBehaviour
     private void Awake()
     {
         inventory = FindObjectOfType<Inventory>();
+        alison = FindObjectOfType<Alison>();
     }
 
     void PickUp()
@@ -28,17 +28,11 @@ public abstract class BaseCollectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        health = other.GetComponent<Health>();
-        alison = other.GetComponent<Alison>();
-
         if (other.gameObject.tag == "Player")
         {
             PickUp();
             gameObject.SetActive(false);
-            
-
         }
-
     }
 
 }
