@@ -13,9 +13,10 @@ public class Consumable : Item
     public override void Use()
     {
         // Heal the player
-        Alison alison = FindObjectOfType<Alison>();
-        alison.healthBar.Heal(healthGain);
-
+        //Alison alison = FindObjectOfType<Alison>();
+        //alison.healthBar.Heal(healthGain);
+        BaseCollectible BC = FindObjectOfType<BaseCollectible>();
+        BC.ApplyEffect();
         Debug.Log(name + " consumed!");
 
         RemoveFromInventory();  // Remove the item after use

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81f7f1ac28693d4d94aa87c8a36ce75, type: 3}
   m_Name: Health
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: Health Potion
+  icon: {fileID: 21300000, guid: 54ce0759ff1acd843873a4c5c225c14a, type: 3}
   showInInventory: 1
-  healthGain: 0
   alison: {fileID: 0}
+  healthGain: 5
