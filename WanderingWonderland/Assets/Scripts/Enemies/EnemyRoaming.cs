@@ -21,7 +21,10 @@ public class EnemyRoaming : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        GetWaypoints();
+        if(WaypointContainer)
+        {
+            GetWaypoints();
+        }
         waypoint = new Transform[enemy.Length];
         distanceLeftToTravel = new float[enemy.Length];
 

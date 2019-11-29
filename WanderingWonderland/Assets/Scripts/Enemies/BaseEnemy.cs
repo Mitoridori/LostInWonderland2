@@ -105,12 +105,16 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
 
     public void Movement()
     {
-        if (enemyMovement)
+        if(enemyMovement.waypoints.Length != 0)
         {
-            enemyMovement.RoamingPath();
-            ResetAnims();
-            enemyAnim.SetFloat("Move", 0.6f);
-            enemyAnim.SetFloat("Attack", 0f);
+            if (enemyMovement)
+            {
+                enemyMovement.RoamingPath();
+                ResetAnims();
+                enemyAnim.SetFloat("Move", 0.6f);
+                enemyAnim.SetFloat("Attack", 0f);
+                enemyAnim.SetFloat("MeleeAttack", 0f);
+            }
         }
     }
 
