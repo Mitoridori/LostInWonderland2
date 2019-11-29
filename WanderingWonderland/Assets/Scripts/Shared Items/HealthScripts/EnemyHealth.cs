@@ -11,7 +11,7 @@ public class EnemyHealth : Health
 
     private void Update()
     {
-        healthBar.sizeDelta = new Vector2((GetCurrentHealth() * 2), healthBar.sizeDelta.y);
+        healthBar.sizeDelta = new Vector2(GetCurrentHealth(), healthBar.sizeDelta.y);
     }
 
 }

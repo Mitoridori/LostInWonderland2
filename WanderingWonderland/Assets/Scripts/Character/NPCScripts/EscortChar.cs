@@ -13,6 +13,8 @@ public class EscortChar : NPCController, IQuestID
     public int Experience { get; set; }
     public int Coins { get; set; }
 
+    protected Animator billyAnim;
+
 
     private void Awake()
     {
@@ -31,6 +33,7 @@ public class EscortChar : NPCController, IQuestID
         if ((Alison.transform.position - transform.position).magnitude <= followRange)
         {
            agent.SetDestination(Alison.transform.position + new Vector3(0, 0, 1));
+            billyAnim.SetLayerWeight(0, 1);
         }
     }
 
