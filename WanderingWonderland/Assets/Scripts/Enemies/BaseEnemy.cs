@@ -93,7 +93,6 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
             }
             else if (state == EnemyStates.dead)
             {
-                Done();
                 enemyAnim.SetLayerWeight(4, 1);
                 Invoke("DespawnEnemyCorpse", enemyAnim.speed);
             }
@@ -132,6 +131,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     void DespawnEnemyCorpse()
     {
         gameObject.SetActive(false);
+        Done();
     }
 
     void CheckIfActive()
