@@ -20,6 +20,7 @@ public class EscortChar : NPCController, IQuestID
     {
         agent = GetComponent<NavMeshAgent>();
         ID = "BillyBob";
+        billyAnim = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
