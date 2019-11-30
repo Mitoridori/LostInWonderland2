@@ -23,7 +23,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     float turnSpeed = 1.0f;
     float singleStep;
     int currentHealth;
-
+    bool isDead;
 
     private enum EnemyStates
     {
@@ -131,7 +131,12 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     void DespawnEnemyCorpse()
     {
         gameObject.SetActive(false);
-        Done();
+        if (isDead == true)
+        {
+            Done();
+            isDead = false;
+        }
+            
     }
 
     void CheckIfActive()
@@ -159,6 +164,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
         if(health.GetCurrentHealth() <= 0)
         {
             state = EnemyStates.dead;
+            isDead = true;
         }
     }
 
