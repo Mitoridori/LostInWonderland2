@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81f7f1ac28693d4d94aa87c8a36ce75, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  name: PunishmentPunch
+  name: Damage
   icon: {fileID: 21300000, guid: b68804e1a622fa84bb822c15a258a5f9, type: 3}
   showInInventory: 1
   alison: {fileID: 0}
-  healthGain: 0
+  ItemCost: 10
