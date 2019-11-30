@@ -7,7 +7,7 @@ public class MeleeEnemy : BaseEnemy
 
     private void Awake()
     {
-        ID = "Melee Enemy";
+        ID = "Enemy";
         Experience = 10;
         Coins = 25;
     }

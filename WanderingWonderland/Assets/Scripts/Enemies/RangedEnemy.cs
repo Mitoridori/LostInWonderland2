@@ -7,7 +7,7 @@ public class RangedEnemy : BaseEnemy
 
     private void Awake()
     {
-        ID = "Ranged Enemy";
+        ID = "Enemy";
         Experience = 10;
         Coins = 25;
     }

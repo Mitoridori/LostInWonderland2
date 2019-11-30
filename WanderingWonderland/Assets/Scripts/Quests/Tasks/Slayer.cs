@@ -11,7 +11,7 @@ public class Slayer : Quest
 
         QuestName = "Bandit Basher";
         Description = "Clear out the bandit camp";
-        NPCID = "wood";
+        NPCID = "Enemy";
         ExperenceReward = 100;
         RequiredAmount = 4;
         CurrentAmount = 0;

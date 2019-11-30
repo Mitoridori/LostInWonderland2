@@ -48,7 +48,7 @@ public class CharacterCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
 
         if (Input.GetButton("Toggle Move"))
