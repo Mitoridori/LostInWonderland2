@@ -5,7 +5,8 @@ using UnityEngine;
 public abstract class NPCController : MonoBehaviour
 {
 
-    public GameObject NPCTextBox;
+    public GameObject QuestTextBox;
+    public GameObject ShopTextBox;
     bool NPCClick = false;
 
     public Transform Alison;
@@ -29,13 +30,13 @@ public abstract class NPCController : MonoBehaviour
     //Interactions with NPC
     void QuestGiverMenuOn()
     {
-        NPCTextBox.SetActive(true);
+        QuestTextBox.SetActive(true);
         NPCClick = true;
         Interact();
     }
     public void QuestGiverMenuOff()
     {
-        NPCTextBox.SetActive(false);
+        QuestTextBox.SetActive(false);
         NPCClick = false;
     }
 
@@ -57,7 +58,13 @@ public abstract class NPCController : MonoBehaviour
                             QuestGiverMenuOff();
                         //Debug.Log("Quest giver clicked");
                         break;
-
+                    case "NPCTalk":
+                        if (!NPCClick)
+                            ShopGiverMenuOn();
+                        else
+                            ShopGiverMenuOff();
+                        //Debug.Log("Quest giver clicked");
+                        break;
                     default:
                         break;
 
@@ -67,6 +74,19 @@ public abstract class NPCController : MonoBehaviour
         }
 
     }
+
+    void ShopGiverMenuOn()
+    {
+        ShopTextBox.SetActive(true);
+        NPCClick = true;
+        Interact();
+    }
+    public void ShopGiverMenuOff()
+    {
+        ShopTextBox.SetActive(false);
+        NPCClick = false;
+    }
+
 
     public void LookAt()
     {

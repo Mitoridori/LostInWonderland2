@@ -1865,11 +1865,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8098515196419953792}
   - component: {fileID: 8098515196410084116}
-  - component: {fileID: 8098515195722453788}
-  - component: {fileID: 8098515195722453789}
+  - component: {fileID: 1996469720}
+  - component: {fileID: 1996469719}
   m_Layer: 0
   m_Name: ShopKeeper
-  m_TagString: NPC
+  m_TagString: NPCTalk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1881,7 +1881,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098515196419590496}
-  m_LocalRotation: {x: -0, y: -0.701261, z: -0, w: 0.71290475}
+  m_LocalRotation: {x: 0, y: -0.70126396, z: 0, w: 0.7129017}
   m_LocalPosition: {x: 249.85, y: 0, z: 202.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1915,20 +1915,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &8098515195722453788
-BoxCollider:
+--- !u!143 &1996469720
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098515196419590496}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.445517, y: 0.050604492, z: 1.1955504}
-  m_Center: {x: -1.381682, y: 0.0045289285, z: 1.1096592}
---- !u!114 &8098515195722453789
+  m_Height: 1.5
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &1996469719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1937,9 +1942,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8098515196419590496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9db79ffcdc1ea4387c79346145dc41, type: 3}
+  m_Script: {fileID: 11500000, guid: 8eec50ffe0429fc4683b92df1aa69f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestTextBox: {fileID: 0}
+  ShopTextBox: {fileID: 0}
+  Alison: {fileID: 0}
+  SUIM: {fileID: 0}
+  inventory: {fileID: 0}
+  ReplenishRemedy: {fileID: 11400000, guid: a7de1da34f6e64d4fb504c32802a7bb0, type: 2}
+  PunishmentPunch: {fileID: 11400000, guid: 46738786d09c5a54aab1f9b26bd2fb32, type: 2}
+  SwiftSoda: {fileID: 11400000, guid: 3c6414ee51e06ee45a3cedff9cf1c194, type: 2}
 --- !u!1 &8098515196419590500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,11 +2337,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114981517263771370, guid: c05884c19038b3e4aab83b6f024ce426,
         type: 3}
-      propertyPath: alison
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114981517263771370, guid: c05884c19038b3e4aab83b6f024ce426,
-        type: 3}
       propertyPath: Cost
       value: 10
       objectReference: {fileID: 0}
@@ -2411,11 +2419,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 825151181797443857, guid: 6a600146d03561140b08229a95d97de8,
-        type: 3}
-      propertyPath: alison
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 825151181797443857, guid: 6a600146d03561140b08229a95d97de8,
         type: 3}

@@ -12,9 +12,6 @@ public class Consumable : Item
     // This is called when pressed in the inventory
     public override void Use()
     {
-        // Heal the player
-        //Alison alison = FindObjectOfType<Alison>();
-        //alison.healthBar.Heal(healthGain);
         BaseCollectible BC = FindObjectOfType<BaseCollectible>();
         BC.ApplyEffect();
         Debug.Log(name + " consumed!");

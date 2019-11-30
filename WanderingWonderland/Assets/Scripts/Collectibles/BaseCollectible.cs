@@ -30,8 +30,13 @@ public abstract class BaseCollectible : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            PickUp();
-            gameObject.SetActive(false);
+            if (inventory.items.Count >= inventory.space)
+                Debug.Log("There is no room.");
+            else
+            {
+                PickUp();
+                gameObject.SetActive(false);
+            }
         }
     }
 
