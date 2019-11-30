@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.6, y: -35.9}
+  m_AnchoredPosition: {x: 30.7, y: -50.7}
   m_SizeDelta: {x: 36.62, y: 17.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &231287043
@@ -696,7 +696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -247, y: 23}
+  m_AnchoredPosition: {x: -298.4, y: 39.4}
   m_SizeDelta: {x: 16.150024, y: 11.940002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1625648379
@@ -754,10 +754,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.49411768, g: 0.46274513, b: 0.18823531, a: 1}
+    m_HighlightedColor: {r: 0.49411768, g: 0.46274513, b: 0.18823531, a: 1}
+    m_PressedColor: {r: 0.49411768, g: 0.46274513, b: 0.18823531, a: 1}
+    m_DisabledColor: {r: 0.49411768, g: 0.46274513, b: 0.18823531, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -819,7 +819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.76, y: 40.83}
+  m_AnchoredPosition: {x: 0.76, y: 52}
   m_SizeDelta: {x: 87.9, y: 11.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1714385487
@@ -1048,8 +1048,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1275, y: 4.19}
-  m_SizeDelta: {x: 89.165, y: 58.37}
+  m_AnchoredPosition: {x: 0.76, y: 2.16}
+  m_SizeDelta: {x: 87.9, y: 83.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1824282755
 CanvasRenderer:
@@ -1206,8 +1206,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 248, y: -206}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 262.4, y: -247.8}
+  m_SizeDelta: {x: 110.2, y: 134.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2040478663
 CanvasRenderer:
@@ -1602,8 +1602,8 @@ MonoBehaviour:
   TextTally: {fileID: 8070014348466489466}
   NPCBoxOne: {fileID: 1714385486}
   NPCBoxTwo: {fileID: 1824282754}
-  ToggleButtonA: {fileID: 0}
-  ToggleButtonB: {fileID: 5726727526343059359}
+  ToggleButtonA: {fileID: 5726727526343059359}
+  ToggleButtonB: {fileID: 0}
 --- !u!1 &5726727524601529308
 GameObject:
   m_ObjectHideFlags: 0
