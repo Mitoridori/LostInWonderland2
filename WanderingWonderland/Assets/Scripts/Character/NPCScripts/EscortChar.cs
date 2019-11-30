@@ -33,7 +33,8 @@ public class EscortChar : NPCController, IQuestID
         if ((Alison.transform.position - transform.position).magnitude <= followRange)
         {
            agent.SetDestination(Alison.transform.position + new Vector3(0, 0, 1));
-            billyAnim.SetLayerWeight(0, 1);
+           if(billyAnim)
+               billyAnim.SetLayerWeight(0, 1);
         }
     }
 
