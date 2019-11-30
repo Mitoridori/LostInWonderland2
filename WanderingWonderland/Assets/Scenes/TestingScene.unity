@@ -709,6 +709,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863209279765016865, guid: 11bbdba1ca6b54e4190aaf3f25c8ec19,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859436150540785795, guid: 11bbdba1ca6b54e4190aaf3f25c8ec19,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859436150540785795, guid: 11bbdba1ca6b54e4190aaf3f25c8ec19,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859436150540785795, guid: 11bbdba1ca6b54e4190aaf3f25c8ec19,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863209277063199215, guid: 11bbdba1ca6b54e4190aaf3f25c8ec19,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bbdba1ca6b54e4190aaf3f25c8ec19, type: 3}
 --- !u!1001 &377544818
@@ -1334,6 +1359,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReplenishRemedy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3683420834683367877, guid: 1d32410dbffbd5b4da683ca1a066f767,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3680456601375418893, guid: 1d32410dbffbd5b4da683ca1a066f767,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1388,6 +1418,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683420835301993535, guid: 1d32410dbffbd5b4da683ca1a066f767,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683420835185977235, guid: 1d32410dbffbd5b4da683ca1a066f767,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d32410dbffbd5b4da683ca1a066f767, type: 3}
@@ -3843,6 +3883,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119045996223267893, guid: 55912ae23645b534da582e3974c680fb,
+        type: 3}
+      propertyPath: ToggleButtonA
+      value: 
+      objectReference: {fileID: 1996469718}
     - target: {fileID: 2212622638394673555, guid: 55912ae23645b534da582e3974c680fb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3863,10 +3908,5 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4119045996223267893, guid: 55912ae23645b534da582e3974c680fb,
-        type: 3}
-      propertyPath: ToggleButtonA
-      value: 
-      objectReference: {fileID: 1996469718}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55912ae23645b534da582e3974c680fb, type: 3}
