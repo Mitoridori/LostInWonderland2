@@ -53,7 +53,7 @@ public class EnemyRoaming : MonoBehaviour
             if (RelativeWaypointPosition.magnitude < 5)
             {
                 currentWaypoint++;
-                if(currentWaypoint >= waypoints.Length)
+                if (currentWaypoint >= waypoints.Length)
                 {
                     currentWaypoint = 0;
                 }

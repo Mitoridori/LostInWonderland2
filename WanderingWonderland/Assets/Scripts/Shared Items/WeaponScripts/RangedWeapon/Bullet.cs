@@ -32,6 +32,11 @@ public class Bullet : MonoBehaviour
             other.GetComponent<Health>().TakeDamage(damageValue);
             CollidedWithObject();
         }
+
+        if(other.gameObject.tag == "Ground")
+        {
+            CollidedWithObject();
+        }
     }
 
 }

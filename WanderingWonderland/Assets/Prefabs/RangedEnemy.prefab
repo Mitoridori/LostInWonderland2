@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe59fa281dc099543a509e8bc3b1fc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackSpeed: 2
   weapon: {fileID: 6019685625106224348}
   attackRange: 30
   maxHealthPoints: 100
