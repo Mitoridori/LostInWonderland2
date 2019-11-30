@@ -5,16 +5,17 @@ using UnityEngine;
 public class ShopNPC : NPCController
 {
     public ShopUIManager SUIM;
-    public Inventory inventory;
-    BaseCollectible BC;
+    Inventory inventory;
     public Item ReplenishRemedy;
     public Item PunishmentPunch;
     public Item SwiftSoda;
+    Alison alison;
 
     void Awake()
     {
-        SUIM = FindObjectOfType<ShopUIManager>();
+        //SUIM = FindObjectOfType<ShopUIManager>();
         inventory = FindObjectOfType<Inventory>();
+        alison = FindObjectOfType<Alison>();
    
     }
 
@@ -27,17 +28,76 @@ public class ShopNPC : NPCController
 
     public void PunishmentPunchGive()
     {
-        inventory.Add(PunishmentPunch);
-        
+        if (alison.GetCoin() >= PunishmentPunch.ItemCost)
+        {
+            if (!inventory.IsFull())
+            {
+                inventory.Add(PunishmentPunch);
+                //doesn't work
+                if (SUIM)
+                    SUIM.buying();
+                alison.SetCoin(-PunishmentPunch.ItemCost);
+            }
+            else
+            {
+                if (SUIM)
+                    SUIM.NPCBoxOne.text = "Your inventory is full";
+            }
+        }
+        else
+        {
+            if (SUIM)
+                SUIM.NoFunds();
+        }
     }
 
     public void ReplenishRemedyGive()
     {
-        inventory.Add(ReplenishRemedy);
+        if (alison.GetCoin() >= ReplenishRemedy.ItemCost)
+        {
+            if (!inventory.IsFull())
+            {
+                inventory.Add(ReplenishRemedy);
+                //doesn't work
+                if (SUIM)
+                    SUIM.buying();
+                alison.SetCoin(-ReplenishRemedy.ItemCost);
+            }
+            else
+            {
+                if (SUIM)
+                    SUIM.NPCBoxOne.text = "Your inventory is full";
+            }
+        }
+        else
+        {
+            if (SUIM)
+                SUIM.NoFunds();
+        }
     }
 
     public void SwiftSodaGive()
     {
-        inventory.Add(SwiftSoda);
+        if (alison.GetCoin() >= SwiftSoda.ItemCost)
+        {
+            if (!inventory.IsFull())
+            {
+                inventory.Add(SwiftSoda);
+                //doesn't work
+                if (SUIM)
+                    SUIM.buying();
+                alison.SetCoin(-SwiftSoda.ItemCost);
+            }
+            else
+            {
+                if (SUIM)
+                    SUIM.NPCBoxOne.text = "Your inventory is full";
+            }
+        }
+        else
+        {
+            if (SUIM)
+                SUIM.NoFunds();
+        }
     }
 }

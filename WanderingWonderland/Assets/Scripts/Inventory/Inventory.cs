@@ -30,6 +30,16 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public bool IsFull()
+    {
+        if (items.Count >= space)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     // Remove an item
     public void Remove(Item item)
     {

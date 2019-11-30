@@ -1949,7 +1949,6 @@ MonoBehaviour:
   ShopTextBox: {fileID: 0}
   Alison: {fileID: 0}
   SUIM: {fileID: 0}
-  inventory: {fileID: 0}
   ReplenishRemedy: {fileID: 11400000, guid: a7de1da34f6e64d4fb504c32802a7bb0, type: 2}
   PunishmentPunch: {fileID: 11400000, guid: 46738786d09c5a54aab1f9b26bd2fb32, type: 2}
   SwiftSoda: {fileID: 11400000, guid: 3c6414ee51e06ee45a3cedff9cf1c194, type: 2}

@@ -1203,6 +1203,7 @@ MonoBehaviour:
   baseDamage: 10
   PlayerStartCoins: 100
   CC: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &114079797936897750
 MonoBehaviour:
   m_ObjectHideFlags: 0

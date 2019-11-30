@@ -11,6 +11,7 @@ public class Item : ScriptableObject
     public bool showInInventory = true;
     Inventory inventory;
     public Alison alison;
+    public int ItemCost;
     // Called when the item is pressed in the inventory
     public void Start()
     {

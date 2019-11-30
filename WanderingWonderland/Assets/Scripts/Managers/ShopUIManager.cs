@@ -59,7 +59,7 @@ public class ShopUIManager : MonoBehaviour
         //add other responces to welcomes if needed. 
     }
 
-    void buying()
+    public void buying()
     {
         if (shopNPC)
         {
@@ -67,7 +67,7 @@ public class ShopUIManager : MonoBehaviour
         }
     }
 
-    void NoFunds()
+    public void NoFunds()
     {
         if (shopNPC)
         {

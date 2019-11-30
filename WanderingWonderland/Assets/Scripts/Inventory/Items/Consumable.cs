@@ -6,14 +6,25 @@
 public class Consumable : Item
 {
 
-    public int healthGain;      // How much health?
-    
 
     // This is called when pressed in the inventory
     public override void Use()
     {
-        BaseCollectible BC = FindObjectOfType<BaseCollectible>();
-        BC.ApplyEffect();
+        if (name == "Health")
+        {
+            BaseCollectible BC = FindObjectOfType<ReplishmentRemedy>();
+            BC.ApplyEffect();
+        }
+        if (name == "Speed")
+        {
+            BaseCollectible BC = FindObjectOfType<SwiftSoda>();
+            BC.ApplyEffect();
+        }
+        if (name == "Damage")
+        {
+            BaseCollectible BC = FindObjectOfType<PunishmentPunch>();
+            BC.ApplyEffect();
+        }
         Debug.Log(name + " consumed!");
 
         RemoveFromInventory();  // Remove the item after use
