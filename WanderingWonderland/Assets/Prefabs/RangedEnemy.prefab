@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe59fa281dc099543a509e8bc3b1fc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 3
+  attackSpeed: 1
   weapon: {fileID: 6019685625106224348}
   attackRange: 30
   maxHealthPoints: 100
@@ -2362,11 +2362,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthbarCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1701494137057612426, guid: cfebf37327785fa42b1bba1f92a2015f,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 1701494138274917859, guid: cfebf37327785fa42b1bba1f92a2015f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2488,6 +2483,11 @@ PrefabInstance:
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1701494138590090958, guid: cfebf37327785fa42b1bba1f92a2015f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701494137057612426, guid: cfebf37327785fa42b1bba1f92a2015f,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 100

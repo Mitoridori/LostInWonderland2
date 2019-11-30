@@ -18,6 +18,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     protected CharController player;
     protected Animator enemyAnim;
     EnemyHealth health;
+    GameManager gm;
     float nextAttack;
     float turnSpeed = 1.0f;
     float singleStep;
@@ -45,6 +46,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
         currentHealth = maxHealthPoints;
         nextAttack = Time.time;
         enemyAnim = GetComponent<Animator>();
+        gm = FindObjectOfType<GameManager>();
 
         if(health)
         {
@@ -61,38 +63,47 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
 
     void UpdateEnemy()
     {
-        CheckCurrentHealth();
-        if (state != EnemyStates.dead)
+        if(gm && !gm.isPaused)
         {
-            switch (state)
+            CheckCurrentHealth();
+            if (state != EnemyStates.dead)
             {
-                case EnemyStates.waiting:
-                    CheckIfActive();
-                    break;
-                case EnemyStates.attacking:
-                    CheckIfCanAttack();
-                    StopAttacking();
-                    break;
-                case EnemyStates.roaming:
-                    FindTarget(attackRange);
-                    Movement();
-                    break;
+                switch (state)
+                {
+                    case EnemyStates.waiting:
+                        CheckIfActive();
+                        break;
+                    case EnemyStates.attacking:
+                        CheckIfCanAttack();
+                        StopAttacking();
+                        break;
+                    case EnemyStates.roaming:
+                        FindTarget(attackRange);
+                        Movement();
+                        break;
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
+
+                if (state == EnemyStates.attacking)
+                {
+                    RotateEnemy();
+                }
             }
-            
-            if(state == EnemyStates.attacking)
+            else if (state == EnemyStates.dead)
             {
-                RotateEnemy();
+                Done();
+                enemyAnim.SetLayerWeight(4, 1);
+                Invoke("DespawnEnemyCorpse", enemyAnim.speed);
             }
         }
-        else if (state == EnemyStates.dead)
+        else
         {
-            Done();
-            enemyAnim.SetLayerWeight(4, 1);
-            Invoke("DespawnEnemyCorpse", enemyAnim.speed);
+            enemyAnim.SetFloat("Attack", 0f);
+            enemyAnim.SetFloat("MeleeAttack", 0f);
         }
+        
     }
 
     void ResetAnims()

@@ -44,7 +44,7 @@ public class Alison : MonoBehaviour
 
     private void Update()
     {
-        if(currentHealth == 0)
+        if(healthBar.GetCurrentHealth() <= 0)
         {
             SceneManager.LoadScene("DeathScreen");
         }
