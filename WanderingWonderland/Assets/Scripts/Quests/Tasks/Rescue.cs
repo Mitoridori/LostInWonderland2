@@ -41,7 +41,10 @@ public class Rescue : Quest
     {
         if (QUIM)
         {
-            QUIM.TextDetails.text = "Find Billy and bring him home!";
+            if (BillyBob.Found == false)
+                QUIM.TextDetails.text = "Find Billy and bring him home!";
+            if (BillyBob.Found == true)
+                QUIM.TextDetails.text = "Thank you, now don't go too fast or you'll lose me!";
             QUIM.TextTally.text = this.CurrentAmount + " / " + RequiredAmount;
         }
     }

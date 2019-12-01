@@ -14,7 +14,7 @@ public class EscortChar : NPCController, IQuestID
     public int Coins { get; set; }
 
     protected Animator billyAnim;
-
+    public bool Found;
 
     private void Awake()
     {
@@ -22,12 +22,14 @@ public class EscortChar : NPCController, IQuestID
         ID = "BillyBob";
         billyAnim = GetComponent<Animator>();
         Finished = true;
+        Found = false;
     }
     private void FixedUpdate()
     {
         if(Finished==false)
         {
             FollowPlayer();
+            Found = true;
         }
         
 
@@ -39,7 +41,7 @@ public class EscortChar : NPCController, IQuestID
         {
            agent.SetDestination(Alison.transform.position + new Vector3(0, 0, 1));
            if(billyAnim)
-               billyAnim.SetLayerWeight(0, 1);
+               billyAnim.SetLayerWeight(1, 1);
         }
     }
 
