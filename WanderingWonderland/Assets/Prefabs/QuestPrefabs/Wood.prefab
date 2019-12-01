@@ -91,10 +91,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c4eef982723664aa2fc4593e5fd832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   alison: {fileID: 0}
+  inventory: {fileID: 0}
+  item: {fileID: 0}
   amount: 1
-  duration: 0
+  duration: 60
+  Cost: 0
 --- !u!65 &1460980644756745594
 BoxCollider:
   m_ObjectHideFlags: 0

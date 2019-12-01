@@ -28,7 +28,13 @@ public class Wood : BaseCollectible, IQuestID
             gameObject.SetActive(false);
             Done();
         }
+        this.Invoke("reset", duration);
 
+    }
+
+    void reset()
+    {
+        gameObject.SetActive(true);
     }
     public void Done()
     {
