@@ -60,6 +60,13 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     {
         UpdateEnemy();
     }
+    void reset()
+    {
+        currentHealth = maxHealthPoints;
+        state = EnemyStates.waiting;
+        gameObject.SetActive(true);
+        
+    }
 
     void UpdateEnemy()
     {
@@ -135,6 +142,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
         {
             Done();
             isDead = false;
+            //this.Invoke("reset", 10);
         }
             
     }
