@@ -21,11 +21,15 @@ public class EscortChar : NPCController, IQuestID
         agent = GetComponent<NavMeshAgent>();
         ID = "BillyBob";
         billyAnim = GetComponent<Animator>();
+        Finished = true;
     }
     private void FixedUpdate()
     {
-        if(!Finished)
-        FollowPlayer();
+        if(Finished==false)
+        {
+            FollowPlayer();
+        }
+        
 
     }
 
