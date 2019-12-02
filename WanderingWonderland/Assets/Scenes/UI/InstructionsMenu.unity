@@ -170,8 +170,9 @@ MonoBehaviour:
   m_text: "Welcome to Wandering Wonderland. Following the events of the first game
     our hero Alison has arrived to a new region of Wonderland to help Johbecregon,
     a village in dire need of Alison's mercenenary skills.\n Use the W A S D keys
-    to move, and the W and E key to strafe.  Z to attack.  Left click the mouse button
-    to interact with NPC's and the Inventory.\n Good luck adventurer!"
+    to move, and the W and E key to strafe.  Z to attack, Left Shift to run, and Space
+    to jump.  Left click the mouse button to interact with NPC's and the Inventory.\n
+    Good luck adventurer!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 26.4
+  m_fontSize: 25
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -240,10 +241,10 @@ MonoBehaviour:
   m_margin: {x: -252.99417, y: -134.49405, z: -131.31769, w: -88.30641}
   m_textInfo:
     textComponent: {fileID: 50750434}
-    characterCount: 375
+    characterCount: 413
     spriteCount: 0
-    spaceCount: 72
-    wordCount: 69
+    spaceCount: 80
+    wordCount: 77
     linkCount: 0
     lineCount: 9
     pageCount: 1
