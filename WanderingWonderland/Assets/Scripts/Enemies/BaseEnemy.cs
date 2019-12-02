@@ -25,6 +25,9 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     int currentHealth;
     bool isDead;
 
+    private float respawnDelay = 30f;
+    private float respawnTimer;
+
     private enum EnemyStates
     {
         waiting,
@@ -60,12 +63,20 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
     {
         UpdateEnemy();
     }
-    void reset()
+    void Reset()
     {
-        currentHealth = maxHealthPoints;
-        state = EnemyStates.waiting;
-        gameObject.SetActive(true);
-        
+        respawnTimer += Time.time;
+        if (respawnTimer >= respawnDelay)
+        {
+            respawnTimer = 0;
+            currentHealth = maxHealthPoints;
+            if (health)
+            {
+                health.SetMaxHealth(currentHealth);
+            }
+            state = EnemyStates.waiting;
+            gameObject.SetActive(true);
+        }  
     }
 
     void UpdateEnemy()
@@ -142,7 +153,7 @@ public abstract class BaseEnemy : MonoBehaviour, IQuestID
         {
             Done();
             isDead = false;
-            //this.Invoke("reset", 10);
+            Invoke("Reset", 2);
         }
             
     }
