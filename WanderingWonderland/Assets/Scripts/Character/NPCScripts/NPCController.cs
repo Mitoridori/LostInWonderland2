@@ -75,6 +75,16 @@ public abstract class NPCController : MonoBehaviour
 
     }
 
+    //void OnTriggerExit(Collider other)
+    //{
+    //    if(other.gameObject.tag == "Player")
+    //    {
+            
+    //        //ShopGiverMenuOff();
+    //        QuestGiverMenuOff();
+    //    }
+    //}
+
     void ShopGiverMenuOn()
     {
         ShopTextBox.SetActive(true);

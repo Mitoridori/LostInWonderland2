@@ -100,4 +100,12 @@ public class ShopNPC : NPCController
                 SUIM.NoFunds();
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+           ShopGiverMenuOff();
+        }
+    }
 }

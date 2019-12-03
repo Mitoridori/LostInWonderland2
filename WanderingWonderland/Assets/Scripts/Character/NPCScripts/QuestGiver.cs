@@ -92,4 +92,13 @@ public class QuestGiver : NPCController
             QUIM.NPCBoxTwo.text = "Thanks for all your help again.";
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            QuestGiverMenuOff();
+        }
+    }
+
 }
